@@ -6,6 +6,7 @@
 % Page layout
 \usepackage{geometry}
 \geometry{paperwidth=210mm, paperheight=297mm} % A4 papersize
+\geometry{textwidth=205mm, headheight=0cm, headsep=0cm}
 
 \usepackage{anysize}
 \marginsize{3cm}{2cm}{2.5cm}{2.5cm}
