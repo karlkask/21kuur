@@ -16,6 +16,10 @@
 
 \usepackage{tocbibind}
 
+% Chapter page break
+\usepackage{etoolbox}
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+
 \usepackage{tocloft}
 % jaotuste numbrite taga on punktid
 \renewcommand{\cftchapaftersnum}{.}
