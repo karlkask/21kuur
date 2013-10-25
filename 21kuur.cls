@@ -115,6 +115,11 @@
 	{\uppercase} % Code before title body
 	[] 
 
+\titlespacing{\chapter}
+	{0pt} % Left
+	{*0} % Vertical before
+	{*2} % Vertical after
+
 % Section title styling
 \titleformat{\section}[hang]
 	{\fontsize{14pt}{16.8pt}\selectfont\bfseries}
