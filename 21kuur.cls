@@ -5,18 +5,16 @@
 
 % Page layout
 \usepackage{geometry}
+\geometry{top=2.50cm, bottom=2.50cm, left=3cm, right=2cm}% Margins
 \geometry{paperwidth=210mm, paperheight=297mm} % A4 papersize
 \geometry{textwidth=205mm, headheight=0cm, headsep=0cm}
-
-\usepackage{anysize}
-\marginsize{3cm}{2cm}{2.5cm}{2.5cm}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
 \usepackage[estonian]{babel} % Set estonian as default language
 
-% Table of contents new name
+% Table of uppercase name
 \addto{\captionsestonian}{\renewcommand*{\contentsname}{SISUKORD}}
 
 % 1.5 linespacing
