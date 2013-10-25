@@ -14,7 +14,38 @@
 
 \usepackage[estonian]{babel} % Set estonian as default language
 
-% Table of uppercase name
+\usepackage{tocloft}
+% jaotuste numbrite taga on punktid
+\renewcommand{\cftchapaftersnum}{.}
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecaftersnum}{.}
+\renewcommand{\cftsubsubsecaftersnum}{.}
+
+%Näitame kõikide - ka väga madala taseme - jaotuste pealkirju
+\setcounter{tocdepth}{99}
+% numbreid ka neile
+\setcounter{secnumdepth}{99}
+
+% Lisade pealkirjad stiilis "Lisa 2 Teise lisa pealkiri"
+\newcommand{\lisa}[1]{%
+        \refstepcounter{chapter}%
+        \addchap{Lisa \thechapter\enskip#1}%
+        \setcounter{section}{0}%
+        }
+
+% pärast käsu \appendix kasutamist lisatakse peatüki asemel lisa.
+\let\origappendix\appendix
+\renewcommand{\appendix}{%
+        \setcounter{chapter}{0}
+        \let\chapter\lisa%
+%        \let\section\lisa%
+        \let\subsection\section%
+        \let\subsubsection\section%
+        }
+
+\renewcommand{\cfttoctitlefont}{\fontsize{16pt}{19.2pt}\selectfont}
+
+% Table of contents uppercase name
 \addto{\captionsestonian}{\renewcommand*{\contentsname}{SISUKORD}}
 
 % 1.5 linespacing
