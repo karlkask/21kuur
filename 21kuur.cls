@@ -14,6 +14,8 @@
 
 \usepackage[estonian]{babel} % Set estonian as default language
 
+\usepackage{tocbibind}
+
 \usepackage{tocloft}
 % jaotuste numbrite taga on punktid
 \renewcommand{\cftchapaftersnum}{.}
