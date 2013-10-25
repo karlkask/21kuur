@@ -1,0 +1,34 @@
+\documentclass{21kuur}
+
+\usepackage[estonian]{babel}
+
+\begin{document}
+
+\title{UURIMIST\"{O}\"{O} VORMISTAMINE LATEX TARKVARAGA TALLINNA 21. KOOLI N\~{O}UETE J\"{A}RGI}
+\author{Karl Kask}
+\date{Tallinn 2013}
+\maketitle
+
+\chapter*{SISSEJUHATUS}
+Peale mu algse teemavaliku kinnitamist v\~{o}ttis minuga \"{u}hendust kooli infotehnoloog ja v\"{a}itis, et sellist uurimist\"{o}\"{o}d pole koolil vaja ning soovitas ise v\"{a}lja mulle alternatiivi. Kuna v\"{a}ljapakutu minus erilist huvi ei tekitanud, olin motiveeritud endale uue teema v\"{a}lja m\~{o}tlema. Peale mitmeid vestlusi oma vennaga, kes on varem uurimist\"{o}\"{o}id LaTeX tarkvaraga vormistanud, sain oma l\~{o}pliku uurimist\"{o}\"{o} teema s\~{o}nastatud.
+Uurimist\"{o}\"{o} vormistamine v\~{o}ib olla keeruline ja aegan\~{o}udev osa t\"{o}\"{o} koostamisest mitmeil p\~{o}hjuseil. Esiteks on vormistamise n\~{o}uded erinevatel koolidel erinevalt m\"{a}ratud. Seega ei saa informatsiooni vormistamise kohta teistest allikatest, kui kooli juhendist ja juhendajalt. Teiseks v\~{o}ivad n\~{o}uded olla vastuk\"{a}ivad ja l\~{o}plik kindel m\"{a}ratlus v\~{o}ib olla aegan\~{o}udev. Kolmandaks v\~{o}ib k\~{o}ikide n\~{o}uete t\"{a}pne j\"{a}lgimine ja reaalne kehtestamine olla aeglane ja liigselt t\"{a}helepanun\~{o}udev protsess. Kauaaegne vormistamise periood v\~{o}ib negatiivselt m\~{o}juda t\"{o}\"{o} sisule ja kvaliteedile.
+Antud uurimist\"{o}\"{o} eesm\"{a}rk on tutvustada LaTeX tarkvara ajalugu, sisu ja eeliseid uurimist\"{o}\"{o} vormistamisel. Innustada \~{o}pilasi kasutama LaTeX tarkvara oma uurimist\"{o}\"{o} vormistamisel, et nende t\"{o}\"{o} kvaliteet ja sisu ei langeks vormistamise arvelt. 
+Kaks uurimisk\"{u}simust on p\"{u}stitatud uurimist\"{o}\"{o} eesm\"{a}rgi t\"{a}itmiseks. Mis on LaTeX tarkvara? Kuidas vormistada uurimist\"{o}\"{o}d Tallinna 21. Kooli n\~{o}uete j\"{a}rgi LaTeX tarkvaraga? Millised on LaTeX tarkvara positiivsed ja negatiivsed k\"{u}ljed v\~{o}rreldes enamlevinud tekstiredaktoritega?
+
+\chapter{TEOREETILINE TAUST}
+TeX tarkvara on Donald Knuth'i loodud tavateksti kui ka muud visuaalset infot sisaldavate dokumentide loomise vahend. Knuth iseloomustas TeX tarkvara, kui vahendit imeilustae raamatute loomise vahendit - eriti, kui raamat sisaldab palju matemaatikat (Mittlebach \& Goossens, 2004:1). 1990-ndate algul l\~{o}petas Knuth stabiilsuse huvides TeX tarkvara arendamise. 1980-ndatel alustas Leslie Lamport LaTeX tarkvara arendust. LaTeX on dokumentide ettevalmistuss\"{u}steem, mis kasutab m\"{a}rgenduskeelt ja TeX-programmi. LaTeX-i filosoofia seisneb autorite vabadusel olla keskendunud sellele, millest nad kirjutavad ja mitte olla h\"{a}iritud sellest, milline on selle kirjat\"{o}\"{o} visuaalne presentatsioon. LaTeX on p\~{o}hiline keeruliste tabelite ja matemaatiliste valemite kujutamismeetod erinevates valdkondades (Kopka \& Daly, 2012:7). LaTeX ei ole ainult matemaatika vormistamiseks. Seda kasutatakse memorandumite, nii \"{a}ri kui ka isiklike kirjade, ajalehtede, artiklite ja raamatute vormistamiseks (Mittlebach \& Goossens, 2004:1). LaTeX tarkvara kasutatakse paljudes erinevates eluvaldkondades: nii teaduses, ajakirjanduses kui ka kunstis (Kopka \& Daly, 2012:3). LaTeX-i vahendid dokumendi loomise automatiseerimiseks teevad selle kasutamise lihtsamaks kui TeX-i kasutamise. LaTeX on l\"{a}binisti vabavara. Selle arendus on lubatud avalikkuse k\"{a}tte, tingimusel, et uue lahenduse nimi on muudetud (Kopka \& Daly, 2012:3). LaTeX on tarkvarana kujunenud \"{u}heks peamiseks TeX-i kasutamise vahendiks. 
+LaTeX-i s\"{u}steem on struktureeritud pakettidesse, mille hulk s\~{o}ltub dokumendi iseloomust ja keerukusest. Pakette on v\~{o}imalik ka ise juurde luua ja sellega LaTeX-i laiendada. LaTeX dokumenti valmistades kirjeldab autor struktuuri m\"{a}rks\~{o}nadega nagu peat\"{u}kk, osa, tabel, joonis, valem jms. LaTeX hoolitseb teksti ja muude elementide paigutuse ja peat\"{u}kkide, valemite, tabelite ja piltide automaatse nummerdamise ning kasutatud kirjanduse viidete ning sisukorra eest.
+
+\section{Miks LaTeX?}
+LaTeX suurim erinevus seisneb loogilises disainis. Enamlevinud tekstiredaktorid p\~{o}hinevad visuaalsel disainil, mist\~{o}ttu neid nimetatakse "WYSIWYG"(what you see is what you get) programmideks. Visuaalse disaini atraktiivsus seisneb kasutaja v\~{o}imaluses muuta oma dokumendi v\"{a}limust t\"{o}\"{o}laual otseselt. Neid programme iseloomustab ka lause "what you see is all you've got", millest tuleb v\"{a}lja ka nende programmide suurim n\~{o}rkus (Lamport, 1994:7). Loogilise disaini v\~{o}imsus seisneb mitmete samasuguste elementide \"{u}heaegses muutmises.
+
+\chapter{METOODIKA}
+Oma uurimist\"{o}\"{o} k\"{a}igus uurin TeX ja LaTeX tarkvara ajalugu, kasutamisalasid ning plusse ja miinuseid. Oma uurimist\"{o}\"{o} praktilises osas arendan v\"{a}lja toimiva lahenduse uurimist\"{o}\"{o} vormistamiseks LaTeX tarkvaras ja kirjeldan \"{u}ksikasjalikult iga detaili ja probleemi, mis t\"{o}\"{o} k\"{a}igus ette v\~{o}ivad sattuda. Toon v\"{a}lja mitmeid t\"{a}htsamaid koodin\"{a}iteid ja enda valmistatud vajalikke pakette. Samuti vormistan oma uurimist\"{o}\"{o} trafaretsemal moel Microsoft Office Word tarkvaraga. Anal\"{u}sin oma t\"{o}\"{o}k\"{a}iku ja kirjeldan oma kogemustest LaTeX tarkvara kasutamise positiivseid ja negatiivseid aspekte ning v\~{o}rdlen oma kogemust Wordi kasutamisega.
+
+\chapter{Praktiline osa - klassi loomine}
+\section{Üldine vormistus}
+\section{Tiitelleht}
+\section{Pildid, graafikud, tabelid}
+
+
+\end{document}
