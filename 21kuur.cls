@@ -6,8 +6,9 @@
 % Page layout
 \usepackage{geometry}
 \geometry{paperwidth=210mm, paperheight=297mm} % A4 papersize
-\geometry{top=2.5cm, bottom=2.5cm, left=3cm, right=2cm} % Margins
-\geometry{textwidth=205mm, headheight=0cm, headsep=0cm}
+
+\usepackage{anysize}
+\marginsize{3cm}{2cm}{2.5cm}{2.5cm}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
