@@ -49,33 +49,28 @@
 \renewcommand{\maketitle}{\newpage%
         \thispagestyle{empty}
         \vspace*{0cm}
-        \Large
         \begin{center}
-        \expandafter{\@asutus} \\
+        \large\expandafter{\@asutus} \\
         \end{center}
 
         \vfill
 
         \begin{center}
-                \huge\expandafter{\@title}
+                \fontsize{20pt}{24pt}\bfseries\expandafter{\@title}
         \end{center}
-        \centerline{\@paber}
+        \large\centerline{\@paber}
 
         \vskip.5in
         \vfill
         
         \begin{flushright}
-        \large{
-                \expandafter{\@author} \expandafter{\@klass} \\
+                \large\expandafter{\@author}\expandafter{\@klass} \\
                 Juhendaja: \expandafter{\@juhendaja}
-                }
         \end{flushright}
         \vskip.5in
 
-        \normalsize
-
         \vfill
-        \centerline{\@koht{} \the\year}%
+        \large\centerline{\@koht{} \the\year}%
         \clearpage
         }
 
