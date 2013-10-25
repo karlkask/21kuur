@@ -16,6 +16,9 @@
 
 \usepackage[estonian]{babel} % Set estonian as default language
 
+% Table of contents new name
+\addto{\captionsestonian}{\renewcommand*{\contentsname}{SISUKORD}}
+
 % 1.5 linespacing
 \usepackage{setspace}
 \onehalfspacing
