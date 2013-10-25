@@ -50,29 +50,31 @@
         \thispagestyle{empty}
         \vspace*{0cm}
         \begin{center}
-        \large\expandafter{\@asutus} \\
+        \fontsize{14pt}{16.8pt}\selectfont\expandafter{\@asutus} \\
         \end{center}
 
         \vfill
 
         \begin{center}
-                \fontsize{20pt}{24pt}\bfseries\expandafter{\@title}
+                \fontsize{20pt}{24pt}\selectfont\bfseries\expandafter{\@title}
         \end{center}
-        \large\centerline{\@paber}
+        \fontsize{14pt}{16.8pt}\selectfont\centerline{\@paber}
 
         \vskip.5in
         \vfill
         
         \begin{flushright}
-                \large\expandafter{\@author}\expandafter{\@klass} \\
+                \fontsize{14pt}{16.8pt}\selectfont\expandafter{\@author} \expandafter{\@klass} \\
                 Juhendaja: \expandafter{\@juhendaja}
         \end{flushright}
         \vskip.5in
 
         \vfill
-        \large\centerline{\@koht{} \the\year}%
+        \fontsize{14pt}{16.8pt}\selectfont\centerline{\@koht{} \the\year}%
         \clearpage
         }
+
+
 
 % Chapter title styling
 \titleformat{\chapter}[hang]
