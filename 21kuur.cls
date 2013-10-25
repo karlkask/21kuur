@@ -132,6 +132,11 @@
 	{}
 	[] 
 
+\titlespacing{\section}
+        {0pt} % Left
+        {*1} % Vertical before
+        {*1} % Vertical after
+
 % Subsection title styling
 \titleformat{\subsection}[hang]
 	{\fontsize{12pt}{14.4pt}\selectfont\bfseries}
