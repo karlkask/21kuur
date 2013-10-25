@@ -31,6 +31,54 @@
 
 \usepackage{titlesec} % Documentation: http://www.tex-tipografia.com/archive/titlesec.pdf
 
+%Title page styling
+%% Tiitellehe genereerimine
+% uued eestikeelsed muutujad
+\def\klass#1{\gdef\@klass{#1}}
+\def\juhendaja#1{\gdef\@juhendaja{#1}}
+\def\asutus#1{\gdef\@asutus{#1}}
+\def\paber#1{\gdef\@paber{#1}}
+\def\koht#1{\gdef\@koht{#1}}
+
+% vaikeväärtused
+\paber{Uurimist\"o\"o}
+\asutus{Tallinna 21. Kool}
+\koht{Tallinn}
+
+% Code to generate the title page
+\renewcommand{\maketitle}{\newpage%
+        \thispagestyle{empty}
+        \vspace*{0cm}
+        \Large
+        \begin{center}
+        \expandafter{\@asutus} \\
+        \end{center}
+
+        \vfill
+
+        \begin{center}
+                \huge\expandafter{\@title}
+        \end{center}
+        \centerline{\@paber}
+
+        \vskip.5in
+        \vfill
+        
+        \begin{flushright}
+        \large{
+                \expandafter{\@author} \expandafter{\@klass} \\
+                Juhendaja: \expandafter{\@juhendaja}
+                }
+        \end{flushright}
+        \vskip.5in
+
+        \normalsize
+
+        \vfill
+        \centerline{\@koht{} \the\year}%
+        \clearpage
+        }
+
 % Chapter title styling
 \titleformat{\chapter}[hang]
 	{\fontsize{16pt}{19.2pt}\selectfont} % Format applied to the whole title - label and text
