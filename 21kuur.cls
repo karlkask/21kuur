@@ -89,28 +89,28 @@
         \thispagestyle{empty}
         \vspace*{-1cm}
         \begin{center}
-        \fontsize{14pt}{16.8pt}\selectfont\expandafter{\@asutus} \\
+        {\fontsize{14pt}{16.8pt}\selectfont\expandafter{\@asutus}} \\
         \end{center}
         \vskip1in
 
         \vfill
 
         \begin{center}
-                \fontsize{20pt}{24pt}\selectfont\bfseries\expandafter{\@title}
+                {\fontsize{20pt}{24pt}\selectfont\bfseries\expandafter{\@title}}
         \end{center}
-        \fontsize{14pt}{16.8pt}\selectfont\centerline{\@paber}
+        {\fontsize{14pt}{16.8pt}\selectfont\centerline{\@paber}}
 
         \vskip.5in
         \vfill
         
         \begin{flushright}
-                \fontsize{14pt}{16.8pt}\selectfont\expandafter{\@author} \expandafter{\@klass} \\
+                {\fontsize{14pt}{16.8pt}\selectfont\expandafter{\@author} \expandafter{\@klass}} \\
                 Juhendaja: \expandafter{\@juhendaja}
         \end{flushright}
         \vskip.5in
 
         \vfill
-        \fontsize{14pt}{16.8pt}\selectfont\centerline{\@koht{} \the\year}%
+        {\fontsize{14pt}{16.8pt}\selectfont\centerline{\@koht{} \the\year}}%
         \clearpage
         }
 
