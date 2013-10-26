@@ -90,6 +90,7 @@
         \begin{center}
         \fontsize{14pt}{16.8pt}\selectfont\expandafter{\@asutus} \\
         \end{center}
+        \vskip1in
 
         \vfill
 
