@@ -197,3 +197,6 @@
 
 \usepackage{graphicx}
 
+\usepackage{xspace}
+\newcommand{\latex}{\LaTeX\xspace}
+
