@@ -160,3 +160,42 @@
 	{0pt}
 	{}
 	[] 
+
+%% tabelid ja joonised
+
+% Jooniste (ja tabelite?) keskjoondus.
+% \makeatletter
+% \def\@floatboxreset{%
+% \reset@font
+% \normalsize
+% \@setminipage
+% \centering}
+% \makeatother
+
+% tabelite ja jooniste numbrite taha koolonit ei pane
+\usepackage{caption}
+% Left-align all captions. Always.
+\captionsetup{justification=justified,singlelinecheck=false}
+
+% Joonis vahetult seda kirjeldava teksti juures ehk sama alapeatüki sees
+\usepackage[section]{placeins}
+
+% captions to "Caption" style instead of "Source".
+\newcommand{\trkcaptionsetup}{\captionsetup{labelformat=simple, labelsep=period, labelfont=bf, font=bf}}
+\trkcaptionsetup % And this is also the default
+% captions to  "Source" mode. Only used internally by \allikas
+\newcommand{\captionstosource}{\captionsetup{labelformat=simple, labelsep=period, font=normalfont}}
+% Add source to a figure or table.
+\newcommand{\allikas}[1]{\vspace{-3mm}\captionstosource\caption*{Allikas: #1}\trkcaptionsetup}
+
+% Töö kõik tabelid tuleb nummerdada läbiva numeratsiooniga (ja kui juba tabelid, siis muu ka vist)
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{equation}{chapter}
+\counterwithout{footnote}{chapter}
+
+%% Pealkirjade välimus
+\usepackage{sectsty}
+
+\usepackage{graphicx}
