@@ -23,6 +23,7 @@
 \usepackage{tocloft}
 
 \setlength{\cftbeforetoctitleskip}{-16pt}
+\setlength{\cftaftertoctitleskip}{20pt}
 
 % jaotuste numbrite taga on punktid
 \renewcommand{\cftchapaftersnum}{.}
