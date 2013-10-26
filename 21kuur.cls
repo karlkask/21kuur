@@ -7,7 +7,7 @@
 \usepackage{geometry}
 \geometry{top=2.50cm, bottom=2.50cm, left=3cm, right=2cm}% Margins
 \geometry{paperwidth=210mm, paperheight=297mm} % A4 papersize
-\geometry{textwidth=205mm, headheight=0cm, headsep=0cm}
+\geometry{textwidth=160mm, textheight=247mm, headheight=0cm, headsep=0cm}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
