@@ -195,8 +195,5 @@
 \counterwithout{equation}{chapter}
 \counterwithout{footnote}{chapter}
 
-%% Pealkirjade välimus
-\usepackage{sectsty}
-
 \usepackage{graphicx}
 
