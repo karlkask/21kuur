@@ -86,7 +86,7 @@
 % Code to generate the title page
 \renewcommand{\maketitle}{\newpage%
         \thispagestyle{empty}
-        \vspace*{0cm}
+        \vspace*{-1cm}
         \begin{center}
         \fontsize{14pt}{16.8pt}\selectfont\expandafter{\@asutus} \\
         \end{center}
