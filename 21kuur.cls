@@ -20,6 +20,24 @@
 \usepackage{etoolbox}
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 
+% Leheküljenumbrid algavad pärast esimest pealkirja, pealkirjaga leht on tühi
+\renewcommand\thepage{}
+\newtoggle{nummerdamelehti}
+\togglefalse{nummerdamelehti}
+
+% Käsk nummerdamise alustamiseks
+\newcommand{\nummerdame}{%
+  \iftoggle{nummerdamelehti}{}{%
+    \renewcommand\thepage{\arabic{page}}%
+    \toggletrue{nummerdamelehti}%
+    \thispagestyle{empty}%
+  }
+}
+
+% Esimese peatüki juures hakkame nummerdama
+\patchcmd{\addchap}{\secdef}{\nummerdame\secdef}{}{}
+\pretocmd{\chapter}{\nummerdame{}}{}{}
+
 \usepackage{tocloft}
 
 \setlength{\cftbeforetoctitleskip}{-16pt}
@@ -114,8 +132,6 @@
         \clearpage
         }
 
-
-
 % Chapter title styling
 \titleformat{\chapter}[hang]
 	{\fontsize{16pt}{19.2pt}\selectfont} % Format applied to the whole title - label and text
@@ -149,9 +165,9 @@
 	[] 
 
 \titlespacing{\section}
-        {0pt} % Left
-        {*1} % Vertical before
-        {*1} % Vertical after
+    {0pt} % Left
+    {*1} % Vertical before
+    {*1} % Vertical after
 
 % Subsection title styling
 \titleformat{\subsection}[hang]
