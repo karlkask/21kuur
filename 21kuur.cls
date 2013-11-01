@@ -216,3 +216,6 @@
 \usepackage{xspace}
 \newcommand{\latex}{\LaTeX\xspace}
 
+% Footnotes to alph
+\renewcommand{\thefootnote}{\alph{footnote}}
+
