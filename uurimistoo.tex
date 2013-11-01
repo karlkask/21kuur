@@ -26,14 +26,29 @@ TeX tarkvara on Donald Knuth'i loodud tavateksti kui ka muud visuaalset infot si
 LaTeX suurim erinevus teiste tekstiredaktoritega seisneb loogilises disainis. Enamlevinud tekstiredaktorid põhinevad visuaalsel disainil, mistõttu neid nimetatakse "WYSIWYG"(what you see is what you get) programmideks. Visuaalse disaini atraktiivsus seisneb kasutaja võimaluses muuta oma dokumendi välimust töölaual otseselt. Neid programme on iseloomustatud ka lausega "what you see is all you've got", millest tuleb välja ka nende programmide suurim nõrkus (Lamport, 1994: 7). Loogilise disaini võimsus seisneb disaini piiramatuses ja mitmete samasuguste elementide üheaegses muutmises. 
 
 \chapter{METOODIKA}
-Oma uurimistöö käigus uurin TeX ja LaTeX tarkvara ajalugu, kasutamisalasid ning plusse ja miinuseid. Oma uurimistöö praktilises osas arendan välja toimiva lahenduse uurimistöö vormistamiseks LaTeX tarkvaras ja kirjeldan üksikasjalikult iga detaili ja probleemi, mis töö käigus ette võivad sattuda. Toon välja mitmeid tähtsamaid koodinäiteid.
-
-\chapter{PRAKTILINE OSA - KLASSI LOOMINE}
-\section{Üldine vormistus}
-\section{Tiitelleht}
-\section{Pildid, graafikud, tabelid}
+Oma uurimistöö käigus uurin TeX ja LaTeX tarkvara ajalugu, kasutamisalasid ning plusse ja miinuseid. Oma uurimistöö praktilises osas arendan välja toimiva lahenduse uurimistöö vormistamiseks LaTeX tarkvaras ja kirjeldan üksikasjalikult iga detaili ja probleemi, mis töö käigus ette võivad sattuda. Toon välja mitmeid tähtsamaid koodinäiteid. Klassi faili proovin teha võimalikult sisuka, et .tex faili võimalikult vähe vormistamisega seotud sisu peaks kirjutama.
 
 \chapter{UURIMISTÖÖ VORMISTAMINE \latex TARKVARAGA}
+Uurimistöö vormistamiseks LaTeX tarkvaraga on vaja arvutile installeerida mõni TeX programm. Näiteks MikTeX. Samuti on vaja kooli nõuetele vastavat klassi faili. Tallinna 21. Kooli uurimistööd võib vormistada 21kuur.cls faili kasutades. Uurimistöö .tex faili kirjutamist saab alustada, kui fail on salvestatud samasse kausta, kus asub klassi fail. Sinna kausta tuleb ka lõplik pdf fail.
+\section{Üldine .tex faili struktuur}
+TeX koodis on põhiliseks elemendiks tagurpidi kaldkriips. Sellega alustatakse käske ja 
+
+LaTeX failide kood alagab tavapäraselt dokumendi klassi nimetamisega. Antud juhul on klassiks 21kuur.
+\begin{verbatim}
+\documentclass{21kuur}
+\end{verbatim}
+LaTeX failis tähistavad dokumendi sisu algust ja lõppu vastavalt begin ja end käsud.
+\begin{verbatim}
+\begin{document}
+\end{document}
+\end{verbatim}
+
+\section{Tiitllehe ja sisukorra loomine}
+\section{Töö sisu sisestamine}
+\section{Kasutatud materjalid}
+\section{Tabelid, lisad, joonised, valemid ja loetelud}
+\section{Viitamine}
+\section{Lisad}
 
 \chapter{TULEMUSED JA ANALÜÜS}
 \newpage
@@ -41,7 +56,7 @@ Oma uurimistöö käigus uurin TeX ja LaTeX tarkvara ajalugu, kasutamisalasid ni
 \addcontentsline{toc}{chapter}{KOKKUVÕTE}
 \newpage
 \chapter*{KASUTATUD MATERJALID}
-\addcontentsline{toc}{chapter}{KASUTATUD MATERJAL}
+\addcontentsline{toc}{chapter}{KASUTATUD MATERJALID}
 Kopka, H., Daly, P. W. (2012). Guide to LaTeX. 4. tr. Boston: Addison-Wesley
 \\\\Lamport, L. (1994). LaTeX: A Document Preparation System. 2. tr. USA: Addison-Wesley
 \\\\Mittelbach, F., Goossens, M. (2004). The LaTeX Companion. 2. tr. Massachusetts: Addison-Wesley
