@@ -18,7 +18,7 @@
 
 % Chapter page break
 \usepackage{etoolbox}
-\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+%\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 
 % Leheküljenumbrid algavad pärast esimest pealkirja, pealkirjaga leht on tühi
 \renewcommand\thepage{}
