@@ -1,31 +1,31 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{21kuur}[2013/10/24 21.kooli uurimustöö vormistuse klass]
 
-\LoadClass[12pt]{report}  % Use standard report class as base of the custom class
+\LoadClass[12pt]{report}  % kasuta standardset report klassi alusena.
 
-% Page layout
+% Lehe asetus.
 \usepackage{geometry}
-\geometry{top=2.50cm, bottom=2.50cm, left=3cm, right=2cm}% Margins
-\geometry{paperwidth=210mm, paperheight=297mm} % A4 papersize
+\geometry{top=2.50cm, bottom=2.50cm, left=3cm, right=2cm}
+\geometry{paperwidth=210mm, paperheight=297mm} 
 \geometry{textwidth=160mm, textheight=247mm, headheight=0cm, headsep=0cm}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-\usepackage[estonian]{babel} % Set estonian as default language
+\usepackage[estonian]{babel} % Eesti keel vaikimisi keeleks.
 
 \usepackage{tocbibind}
 
-% Chapter page break
+% Peatükid algavad uuelt lehelt.
 \usepackage{etoolbox}
 %\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 
-% Leheküljenumbrid algavad pärast esimest pealkirja, pealkirjaga leht on tühi
+% Leheküljenumbrid algavad pärast esimest pealkirja, kuid pealkirjaga leht on tühi.
 \renewcommand\thepage{}
 \newtoggle{nummerdamelehti}
 \togglefalse{nummerdamelehti}
 
-% Käsk nummerdamise alustamiseks
+% Käsk nummerdamise alustamiseks.
 \newcommand{\nummerdame}{%
   \iftoggle{nummerdamelehti}{}{%
     \renewcommand\thepage{\arabic{page}}%
@@ -34,7 +34,7 @@
   }
 }
 
-% Esimese peatüki juures hakkame nummerdama
+% Esimese peatüki juures nummerdamise alustamine.
 \patchcmd{\addchap}{\secdef}{\nummerdame\secdef}{}{}
 \pretocmd{\chapter}{\nummerdame{}}{}{}
 
@@ -49,7 +49,7 @@
 \renewcommand{\cftsubsecaftersnum}{.}
 \renewcommand{\cftsubsubsecaftersnum}{.}
 
-%Näitame kõikide - ka väga madala taseme - jaotuste pealkirju
+% Näitame kõikide - ka väga madala taseme - jaotuste pealkirju
 \setcounter{tocdepth}{99}
 % numbreid ka neile
 \setcounter{secnumdepth}{99}
@@ -73,37 +73,37 @@
 
 \renewcommand{\cfttoctitlefont}{\fontsize{16pt}{19.2pt}\selectfont}
 
-% Table of contents uppercase name
+% Sisukorra  nimes suured tähed.
 \addto{\captionsestonian}{\renewcommand*{\contentsname}{SISUKORD}}
 
-% 1.5 linespacing
+% 1.5 reavahetus.
 \usepackage{setspace}
 \onehalfspacing
 
-% Times New Roman everywhere
+% Times New Roman kõikjal.
 \usepackage{times}
 
-% Remove indentation and add empty row between paragraphs
+% Eemaldab paragrahvidel taande ja teeb nende vahele tühja rea.
 \usepackage[parfill]{parskip}
 
 \usepackage{titlesec} % Documentation: http://www.tex-tipografia.com/archive/titlesec.pdf
 
-%Title page styling
+%Tiitellehe kujundus
 %% Tiitellehe genereerimine
-% uued eestikeelsed muutujad
+% Eestikeelsed muutujad.
 \def\klass#1{\gdef\@klass{#1}}
 \def\juhendaja#1{\gdef\@juhendaja{#1}}
 \def\asutus#1{\gdef\@asutus{#1}}
 \def\paber#1{\gdef\@paber{#1}}
 \def\koht#1{\gdef\@koht{#1}}
 
-% vaikeväärtused
+% Vaikeväärtused
 \paber{Uurimist\"o\"o}
 \asutus{Tallinna 21. Kool}
 \koht{Tallinn}
 
-% Code to generate the title page
-\renewcommand{\maketitle}{\newpage%
+% Kood tiitellehe genereerimiseks.
+\renewcommand{\maketitle}{\newpage
         \thispagestyle{empty}
         \vspace*{-1cm}
         \begin{center}
@@ -132,18 +132,18 @@
         \clearpage
         }
 
-% Chapter title styling
+% Peatüki pealkirja kujundus.
 \titleformat{\chapter}[hang]
-	{\fontsize{16pt}{19.2pt}\selectfont} % Format applied to the whole title - label and text
+	{\fontsize{16pt}{19.2pt}\selectfont}
 	{\thechapter. } % Label format
-	{0pt} % Separation between title and label
-	{\uppercase} % Code before title body
+	{0pt} % Märgise ja pealkirja vahe.
+	{\uppercase} 
 	[] 
 
 \titlespacing{\chapter}
-	{0pt} % Left
-	{*0} % Vertical before
-	{*2} % Vertical after
+	{0pt} % Vasakult
+	{*0} % Vertikaal enne
+	{*2} % Vertikaal peale
 
 \def\ttl@mkchap@i#1#2#3#4#5#6#7{%
     \ttl@assign\@tempskipa#3\relax\beforetitleunit
@@ -156,7 +156,7 @@
     \ttl@finmarks  % Outside the box!
     \@ifundefined{ttlp@#6}{}{\ttlp@write{#6}}}
 
-% Section title styling
+% Alapeatüki pealkirja kujundus.
 \titleformat{\section}[hang]
 	{\fontsize{14pt}{16.8pt}\selectfont\bfseries}
 	{\thesection. }
@@ -164,12 +164,13 @@
 	{}
 	[] 
 
+% Alapeatüki pealkirja kujundus.
 \titlespacing{\section}
-    {0pt} % Left
-    {*1} % Vertical before
-    {*1} % Vertical after
+    {0pt} % Vasakult
+    {*1} % Vertikaal enne
+    {*1} % Vertikaal peale
 
-% Subsection title styling
+% Alapeatüki alapealkirja kujundus.
 \titleformat{\subsection}[hang]
 	{\fontsize{12pt}{14.4pt}\selectfont\bfseries}
 	{\thesubsection. }
@@ -188,9 +189,9 @@
 % \centering}
 % \makeatother
 
-% tabelite ja jooniste numbrite taha koolonit ei pane
+% Tabelite ja jooniste numbrid ilma koolonita.
 \usepackage{caption}
-% Left-align all captions. Always.
+% Kõik pealkirjad vasakjoondusega.
 \captionsetup{justification=justified,singlelinecheck=false}
 
 % Joonis vahetult seda kirjeldava teksti juures ehk sama alapeatüki sees
@@ -204,18 +205,24 @@
 % Add source to a figure or table.
 \newcommand{\allikas}[1]{\vspace{-3mm}\captionstosource\caption*{Allikas: #1}\trkcaptionsetup}
 
-% Töö kõik tabelid tuleb nummerdada läbiva numeratsiooniga (ja kui juba tabelid, siis muu ka vist)
+% Tabelite, jooniste ja valemite läbiv numeratsioon.
 \usepackage{chngcntr}
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
 \counterwithout{equation}{chapter}
 \counterwithout{footnote}{chapter}
 
+% graphicx pakett jooniste sisestamiseks.
 \usepackage{graphicx}
 
+% xspace pakett, ning käsk nime LaTeX stiliseeritud kujutamiseks
 \usepackage{xspace}
 \newcommand{\latex}{\LaTeX\xspace}
 
-% Footnotes to alph
-\renewcommand{\thefootnote}{\alph{footnote}}
+% Joonealuste viidete tähestikuline nummerdamine.
+\renewcommand{\thefootnote}{[\alph{footnote}]}
+
+% Joonealuste viidete nummerdamise lähtestamine.
+\usepackage{perpage}
+\MakePerPage{footnote}
 
