@@ -23,10 +23,11 @@ TeX tarkvara on Donald Knuth'i loodud tavateksti kui ka muud visuaalset infot si
 \\\\LaTeX-i süsteem on struktureeritud pakettidesse, mille hulk sõltub dokumendi iseloomust ja keerukusest. Pakette on võimalik ka ise juurde luua ja sellega LaTeX-i laiendada. LaTeX dokumenti valmistades kirjeldab autor struktuuri märksõnadega nagu peatükk, osa, tabel, joonis, valem jms. LaTeX hoolitseb teksti ja muude elementide paigutuse ja peatükkide, valemite, tabelite ja piltide automaatse nummerdamise ning kasutatud kirjanduse viidete ning sisukorra eest.
 
 \section{Miks LaTeX?}
-LaTeX suurim erinevus teiste tekstiredaktoritega seisneb loogilises disainis. Enamlevinud tekstiredaktorid põhinevad visuaalsel disainil, mistõttu neid nimetatakse „WYSIWYG”(what you see is what you get) programmideks. Visuaalse disaini atraktiivsus seisneb kasutaja võimaluses muuta oma dokumendi välimust töölaual otseselt. Neid programme on iseloomustatud ka lausega „what you see is all you've got”, millest tuleb välja ka nende programmide suurim nõrkus (Lamport, 1994: 7). Loogilise disaini võimsus seisneb disaini piiramatuses ja mitmete samasuguste elementide automaatses üheaegses muutmises. Üks suurimaid LaTeX tarkvara eeliseid on vormistuse eraldamine sisust klassi faili abil. See tähendab, et sama vormistuse peale võib kirjutada lõputuid erinevaid töid, ning sisu vastaks ikka nõuetele. Visuaalse disaini korral peab kõik tööd eraldi vormistama, sest seal peab kõik nõuded uuesti paika panema ja sisestama. LaTeX tarkvara negatiivne külg on vajadus klassi faili või siis piisavate teadmiste järele, et vormistamisega TeX programmis hakkama saada.
+LaTeX suurim erinevus teiste tekstiredaktoritega seisneb loogilises disainis. Enamlevinud tekstiredaktorid põhinevad visuaalsel disainil, mistõttu neid nimetatakse „WYSIWYG”(what you see is what you get) programmideks. Visuaalse disaini atraktiivsus seisneb kasutaja võimaluses muuta oma dokumendi välimust töölaual otseselt. Neid programme on iseloomustatud ka lausega „what you see is all you've got”, millest tuleb välja ka nende programmide suurim nõrkus (Lamport, 1994: 7). Loogilise disaini võimsus seisneb disaini piiramatuses ja mitmete samasuguste elementide automaatses üheaegses muutmises. Üks suurimaid LaTeX tarkvara eeliseid on vormistuse eraldamine sisust klassi faili abil. See tähendab, et sama vormistuse peale võib kirjutada lõputuid erinevaid töid, ning sisu vastaks ikka nõuetele. Visuaalse disaini korral peab kõik tööd eraldi vormistama, sest seal peab kõik nõuded uuesti paika panema ja sisestama. LaTeX tarkvara negatiivne külg on vajadus klassi faili või siis piisavate teadmiste järele, et vormistamisega TeX programmis hakkama saada. Üldjuhul on ülikoolidel klassi fail olemas, ning seda ei pea ise looma. LaTeX tarkvaraga on võimalik ühtlustada dokumentide vormistamist institutsioonisde siseselt.
 
 \chapter{METOODIKA}
-Oma uurimistöö käigus uurin TeX ja LaTeX tarkvara ajalugu, kasutamisalasid ning positiivseid ja negatiivseid külgi. Oma uurimistöö praktilises osas arendan välja toimiva lahenduse uurimistöö vormistamiseks LaTeX tarkvaras ja kirjeldan üksikasjalikultprotsessi. Tutvun põhjalikult kooli uurimistöö juhendiga ning LaTeX dokumentatsiooniga\footnote{http://en.wikibooks.org/wiki/LaTeX}. Proovin luua võimalikult võimeka klassi faili, et tex faili peaks võimalikult vähe sisestama koodi, mis on seotud töö vormistamisega. Klassi faili lisan tööle lisana.
+Oma uurimistöö käigus uurin TeX ja LaTeX tarkvara ajalugu, kasutamisalasid ning positiivseid ja negatiivseid külgi. Oma uurimistöö praktilises osas arendan välja toimiva lahenduse uurimistöö vormistamiseks LaTeX tarkvaras ja kirjeldan üksikasjalikult protsessi. Tutvun põhjalikult kooli uurimistöö juhendiga ning LaTeX dokumentatsiooniga\footnote{http://en.wikibooks.org/wiki/LaTeX}. Proovin luua võimalikult võimeka klassi faili, et tex faili peaks võimalikult vähe sisestama koodi, mis on seotud töö vormistamisega. Klassi faili lisan tööle lisana.
+
 \chapter{UURIMISTÖÖ VORMISTAMINE \latex TARKVARAGA}
 Uurimistöö vormistamiseks LaTeX tarkvaraga on vaja arvutile installeerida mõni TeX programm. Näiteks MikTeX. Samuti on vaja kooli nõuetele vastavat klassi faili. Tallinna 21. Kooli uurimistööd võib vormistada selle uurimistöö käigus loodud 21kuur.cls faili kasutades. Uurimistöö tex faili kirjutamist saab alustada, kui fail on salvestatud samasse kausta, kus asub klassi fail. Samasse kausta tuleb ka salvestab programm ka pdf faili. Tex faili sisu sisestatakse Texworks programmi aknasse ning ülevalt vasakult rippmenüüst valitakse pdfLaTeX + MakeIndex + BibTeX. Sisestatud koodi välundit on võimalik iga hetk kontrollida üleval vasakul oleva rohelise nupu vajutamisel. Nupu vajutamisel loob programm pdf faili, milleks on ka lõplik uurimistöö fail.
 \section{Üldine tex faili struktuur}
@@ -62,7 +63,7 @@ PEALKIRI}
 \end{verbatim}
 
 \section{Tiitllehe ja sisukorra loomine}
-Tiitellehe loomiseks määratakse enne dokumendi sisu algust tiitellehel olev sisu. Seda tehakse käskudega title, argumendiks uurimistöö pealkiri suurte tähtedega vastavalt juhendile, author, argumendiks uurimistöö koostaja nimi, klass, argumendiks koostaja klass, juhendaja, argumendiks juhendaja nimi. Asutuse nimi, asutus, töö liik ning aasta lisatakse automaatselt.
+Tiitellehe loomiseks määratakse enne dokumendi sisu algust tiitellehel olev sisu. Seda tehakse käskudega title, argumendiks uurimistöö pealkiri suurte tähtedega vastavalt juhendile, author, argumendiks uurimistöö koostaja nimi, klass, argumendiks koostaja klass, juhendaja, argumendiks juhendaja nimi. Asutuse nimi, asukoht, töö liik ja aasta lisatakse automaatselt.
 \begin{verbatim}
 \title{UURIMISTÖÖ NIMI}
 \author{Koostaja Nimi}
@@ -176,15 +177,17 @@ Lisade pealkirjana kasutatakse chapter käsku mille lõppu on pandud nummerdamis
 \end{verbatim}
 
 \chapter{TULEMUSED JA ANALÜÜS}
-
+Lõpliku klassi failiga täitsin üldmääral oma uurimistöö peamise eesmärgi, milleks oli sellise lahenduse loomine, et õpilane peaks sisestama vaid oma uurimistöö sisu ning kogu vormistus toimuks automaatselt. Peale mõne koodirea on selline lahendus saavutatud. Uurimistöö vormistaja peab sisukorda käsitsi lisama vaid nummerdamata peatükid. Selles uurimistöös toodud juhendit järgides on võimalik uurimistöö üldjuhul automaatne vormistus. Samuti on olemas LaTeX tarkvara tutvustav teoreetiline osa, kus on põhjendatud selle eelised ning negatiivsed küljed võrreldes enamlevinud tekstiredaktoritega ning ülevaade LaTeX ning TeX tarkvara ajaloost. Seega on uurimistöö eesmärgid täidetud ning uurimisküsimustele vastatud. 
 \chapter*{KOKKUVÕTE}
 \addcontentsline{toc}{chapter}{KOKKUVÕTE}
+Esimesele kahele uurimisküsimusele on vastatud esimeses peatükis ning kolmandale on vastatud kolmandas peatükis. Töö praktilises osas suutsin välja aretada piisavalt võimeka klassi faili, et täita uurimistöö eesmärk. Klassi faili loomine võttis oodetust kauem aega ning oli keerulisem, kui oletasin. Kuid üldjuhul on tulemus piisav. Klassi faili on tulevikus võimalik täiustada ning uuendada. Samuti toon välja ettepaneku täiustada kooli vormistamise juhendit, et sealt ei puuduks informatsioon tabelite, jooniste jm korrektse vormistamise kohta.
 
 \chapter*{KASUTATUD MATERJALID}
 \addcontentsline{toc}{chapter}{KASUTATUD MATERJALID}
 Kopka, H., Daly, P. W. (2012). Guide to LaTeX. 4. tr. Boston: Addison-Wesley
 \\\\Lamport, L. (1994). LaTeX: A Document Preparation System. 2. tr. USA: Addison-Wesley
 \\\\Mittelbach, F., Goossens, M. (2004). The LaTeX Companion. 2. tr. Massachusetts: Addison-Wesley
+\\\\LaTeX. (2013). LaTeX tarkvara dokumentatsioon. [en] http://en.wikibooks.org/wiki/LaTeX \\(31.10.2013).
 \thispagestyle{empty}
 \chapter*{LISA 1 KLASSI FAIL}
 \thispagestyle{empty}
@@ -238,44 +241,29 @@ pealkirjaga leht on tühi.
 \patchcmd{\addchap}{\secdef}{\nummerdame\secdef}{}{}
 \pretocmd{\chapter}{\nummerdame{}}{}{}
 
+% tocloft pakett.
 \usepackage{tocloft}
 
+% Sisukorra pealkirja asetus.
 \setlength{\cftbeforetoctitleskip}{-16pt}
 \setlength{\cftaftertoctitleskip}{20pt}
 
-% jaotuste numbrite taga on punktid
+% Jaotuste numbrite taga punktid.
 \renewcommand{\cftchapaftersnum}{.}
 \renewcommand{\cftsecaftersnum}{.}
 \renewcommand{\cftsubsecaftersnum}{.}
 \renewcommand{\cftsubsubsecaftersnum}{.}
 
-% Näitame kõikide - ka väga madala taseme - jaotuste pealkirju
+% Kujutame kõikide jaotuste pealkirju.
 \setcounter{tocdepth}{99}
-% numbreid ka neile
+% Nummerdus
 \setcounter{secnumdepth}{99}
 
-% Lisade pealkirjad stiilis "Lisa 2 Teise lisa pealkiri"
-\newcommand{\lisa}[1]{%
-        \refstepcounter{chapter}%
-        \addchap{Lisa \thechapter\enskip#1}%
-        \setcounter{section}{0}%
-        }
-
-% pärast käsu \appendix kasutamist lisatakse peatüki asemel 
-lisa.
-\let\origappendix\appendix
-\renewcommand{\appendix}{%
-        \setcounter{chapter}{0}
-        \let\chapter\lisa%
-%        \let\section\lisa%
-        \let\subsection\section%
-        \let\subsubsection\section%
-        }
-
+% Sisukorra pealkirja font.
 \renewcommand{\cfttoctitlefont}{\fontsize{16pt}{19.2pt}
 \selectfont}
 
-% Sisukorra  nimes suured tähed.
+% Sisukorra  pealkirjas suured tähed.
 \addto{\captionsestonian}{\renewcommand*{\contentsname}
 {SISUKORD}}
 
@@ -289,9 +277,10 @@ lisa.
 % Eemaldab paragrahvidel taande ja teeb nende vahele tühja rea.
 \usepackage[parfill]{parskip}
 
+% titlesec pakett.
 \usepackage{titlesec}
 
-%Tiitellehe kujundus
+% Tiitellehe kujundus
 %% Tiitellehe genereerimine
 % Eestikeelsed muutujad.
 \def\klass#1{\gdef\@klass{#1}}
@@ -342,7 +331,7 @@ lisa.
 % Peatüki pealkirja kujundus.
 \titleformat{\chapter}[hang]
   {\fontsize{16pt}{19.2pt}\selectfont}
-  {\thechapter. } % Label format
+  {\thechapter. } % Etiketi formaat
   {0pt} % Märgise ja pealkirja vahe.
   {\uppercase} 
   [] 
@@ -352,15 +341,16 @@ lisa.
   {*0} % Vertikaal enne
   {*2} % Vertikaal peale
 
+% Peatüki eelne vahe.
 \def\ttl@mkchap@i#1#2#3#4#5#6#7{%
     \ttl@assign\@tempskipa#3\relax\beforetitleunit
-    \vspace{\@tempskipa}%<<<<<< REMOVE THE * AFTER \vspace
+    \vspace{\@tempskipa}% Eelmalda pealne \vspace.
     \global\@afterindenttrue
     \ifcase#5 \global\@afterindentfalse\fi
     \ttl@assign\@tempskipb#4\relax\aftertitleunit
-    \ttl@topmode{\@tempskipb}{%
-        \ttl@select{#6}{#1}{#2}{#7}}%
-    \ttl@finmarks  % Outside the box!
+    \ttl@topmode{\@tempskipb}{
+        \ttl@select{#6}{#1}{#2}{#7}}
+    \ttl@finmarks
     \@ifundefined{ttlp@#6}{}{\ttlp@write{#6}}}
 
 % Alapeatüki pealkirja kujundus.
@@ -385,16 +375,7 @@ lisa.
   {}
   [] 
 
-%% tabelid ja joonised
-
-% Jooniste (ja tabelite?) keskjoondus.
-% \makeatletter
-% \def\@floatboxreset{%
-% \reset@font
-% \normalsize
-% \@setminipage
-% \centering}
-% \makeatother
+%% Tabelid ja joonised.
 
 % Tabelite ja jooniste numbrid ilma koolonita.
 \usepackage{caption}
@@ -402,17 +383,17 @@ lisa.
 \captionsetup{justification=justified,singlelinecheck=false}
 
 % Joonis vahetult seda kirjeldava teksti juures ehk sama 
-alapeatüki sees
+alapeatüki sees.
 \usepackage[section]{placeins}
 
-% captions to "Caption" style instead of "Source".
+% Pealkirjad pealkirjade stiili.
 \newcommand{\trkcaptionsetup}{\captionsetup{labelformat=simple, 
 labelsep=period, labelfont=bf, font=bf}}
-\trkcaptionsetup % And this is also the default
-% captions to  "Source" mode. Only used internally by \allikas
+\trkcaptionsetup
+% Pealkirjad allika moodi.
 \newcommand{\captionstosource}{\captionsetup{labelformat=simple, 
 labelsep=period, font=normalfont}}
-% Add source to a figure or table.
+% Allika lisamine joonisele.
 \newcommand{\allikas}[1]{\vspace{-3mm}\captionstosource\caption*
 {Allikas: #1}\trkcaptionsetup}
 
@@ -436,7 +417,6 @@ labelsep=period, font=normalfont}}
 % Joonealuste viidete nummerdamise lähtestamine.
 \usepackage{perpage}
 \MakePerPage{footnote}
-
 
 \end{verbatim}
 

@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{21kuur}[2013/10/24 21.kooli uurimustöö vormistuse klass]
+\ProvidesClass{21kuur}[2013/10/24 Tallinna 21. Kooli uurimustöö vormistuse klass]
 
-\LoadClass[12pt]{report}  % kasuta standardset report klassi alusena.
+\LoadClass[12pt]{report}  % Kasuta standardset report klassi alusena.
 
 % Lehe asetus.
 \usepackage{geometry}
@@ -9,11 +9,13 @@
 \geometry{paperwidth=210mm, paperheight=297mm} 
 \geometry{textwidth=160mm, textheight=247mm, headheight=0cm, headsep=0cm}
 
+% UTF-8
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
 \usepackage[estonian]{babel} % Eesti keel vaikimisi keeleks.
 
+% Sisukord sisukorda.
 \usepackage{tocbibind}
 
 % Peatükid algavad uuelt lehelt.
@@ -38,42 +40,28 @@
 \patchcmd{\addchap}{\secdef}{\nummerdame\secdef}{}{}
 \pretocmd{\chapter}{\nummerdame{}}{}{}
 
+% tocloft pakett.
 \usepackage{tocloft}
 
+% Sisukorra pealkirja asetus.
 \setlength{\cftbeforetoctitleskip}{-16pt}
 \setlength{\cftaftertoctitleskip}{20pt}
 
-% jaotuste numbrite taga on punktid
+% Jaotuste numbrite taga punktid.
 \renewcommand{\cftchapaftersnum}{.}
 \renewcommand{\cftsecaftersnum}{.}
 \renewcommand{\cftsubsecaftersnum}{.}
 \renewcommand{\cftsubsubsecaftersnum}{.}
 
-% Näitame kõikide - ka väga madala taseme - jaotuste pealkirju
+% Kujutame kõikide jaotuste pealkirju.
 \setcounter{tocdepth}{99}
-% numbreid ka neile
+% Nummerdus
 \setcounter{secnumdepth}{99}
 
-% Lisade pealkirjad stiilis "Lisa 2 Teise lisa pealkiri"
-\newcommand{\lisa}[1]{%
-        \refstepcounter{chapter}%
-        \addchap{Lisa \thechapter\enskip#1}%
-        \setcounter{section}{0}%
-        }
-
-% pärast käsu \appendix kasutamist lisatakse peatüki asemel lisa.
-\let\origappendix\appendix
-\renewcommand{\appendix}{%
-        \setcounter{chapter}{0}
-        \let\chapter\lisa%
-%        \let\section\lisa%
-        \let\subsection\section%
-        \let\subsubsection\section%
-        }
-
+% Sisukorra pealkirja font.
 \renewcommand{\cfttoctitlefont}{\fontsize{16pt}{19.2pt}\selectfont}
 
-% Sisukorra  nimes suured tähed.
+% Sisukorra  pealkirjas suured tähed.
 \addto{\captionsestonian}{\renewcommand*{\contentsname}{SISUKORD}}
 
 % 1.5 reavahetus.
@@ -86,9 +74,10 @@
 % Eemaldab paragrahvidel taande ja teeb nende vahele tühja rea.
 \usepackage[parfill]{parskip}
 
-\usepackage{titlesec} % Documentation: http://www.tex-tipografia.com/archive/titlesec.pdf
+% titlesec pakett.
+\usepackage{titlesec}
 
-%Tiitellehe kujundus
+% Tiitellehe kujundus
 %% Tiitellehe genereerimine
 % Eestikeelsed muutujad.
 \def\klass#1{\gdef\@klass{#1}}
@@ -135,7 +124,7 @@
 % Peatüki pealkirja kujundus.
 \titleformat{\chapter}[hang]
 	{\fontsize{16pt}{19.2pt}\selectfont}
-	{\thechapter. } % Label format
+	{\thechapter. } % Etiketi formaat
 	{0pt} % Märgise ja pealkirja vahe.
 	{\uppercase} 
 	[] 
@@ -145,15 +134,16 @@
 	{*0} % Vertikaal enne
 	{*2} % Vertikaal peale
 
+% Peatüki eelne vahe.
 \def\ttl@mkchap@i#1#2#3#4#5#6#7{%
     \ttl@assign\@tempskipa#3\relax\beforetitleunit
-    \vspace{\@tempskipa}%<<<<<< REMOVE THE * AFTER \vspace
+    \vspace{\@tempskipa}% Eelmalda pealne \vspace.
     \global\@afterindenttrue
     \ifcase#5 \global\@afterindentfalse\fi
     \ttl@assign\@tempskipb#4\relax\aftertitleunit
-    \ttl@topmode{\@tempskipb}{%
-        \ttl@select{#6}{#1}{#2}{#7}}%
-    \ttl@finmarks  % Outside the box!
+    \ttl@topmode{\@tempskipb}{
+        \ttl@select{#6}{#1}{#2}{#7}}
+    \ttl@finmarks
     \@ifundefined{ttlp@#6}{}{\ttlp@write{#6}}}
 
 % Alapeatüki pealkirja kujundus.
@@ -178,31 +168,22 @@
 	{}
 	[] 
 
-%% tabelid ja joonised
-
-% Jooniste (ja tabelite?) keskjoondus.
-% \makeatletter
-% \def\@floatboxreset{%
-% \reset@font
-% \normalsize
-% \@setminipage
-% \centering}
-% \makeatother
+%% Tabelid ja joonised.
 
 % Tabelite ja jooniste numbrid ilma koolonita.
 \usepackage{caption}
 % Kõik pealkirjad vasakjoondusega.
 \captionsetup{justification=justified,singlelinecheck=false}
 
-% Joonis vahetult seda kirjeldava teksti juures ehk sama alapeatüki sees
+% Joonis vahetult seda kirjeldava teksti juures ehk sama alapeatüki sees.
 \usepackage[section]{placeins}
 
-% captions to "Caption" style instead of "Source".
+% Pealkirjad pealkirjade stiili.
 \newcommand{\trkcaptionsetup}{\captionsetup{labelformat=simple, labelsep=period, labelfont=bf, font=bf}}
-\trkcaptionsetup % And this is also the default
-% captions to  "Source" mode. Only used internally by \allikas
+\trkcaptionsetup
+% Pealkirjad allika moodi.
 \newcommand{\captionstosource}{\captionsetup{labelformat=simple, labelsep=period, font=normalfont}}
-% Add source to a figure or table.
+% Allika lisamine joonisele.
 \newcommand{\allikas}[1]{\vspace{-3mm}\captionstosource\caption*{Allikas: #1}\trkcaptionsetup}
 
 % Tabelite, jooniste ja valemite läbiv numeratsioon.
