@@ -14,9 +14,9 @@
 Peale mu algse teemavaliku kinnitamist võttis minuga ühendust kooli infotehnoloog ja väitis, et sellist uurimistööd pole koolil vaja ning soovitas mulle alternatiivi. Kuna väljapakutu minus erilist huvi ei tekitanud, otsustasin endale uue teema välja mõelda. Peale mitmeid vestlusi oma vennaga, kes on varem uurimistööid LaTeX tarkvaraga vormistanud, sain oma lõpliku uurimistöö teema sõnastatud.
 \\\\LaTeX tarkvara võimaldab õpilasele sellise olukorra, kus ta peab sisestama vaid oma uurimistöö teksti ja kogu vormistus toimub automaatselt vastavalt nõuetele. Uurimistöö vormistamine võib olla keeruline ja aeganõudev osa töö koostamisest mitmeil põhjuseil. Esiteks on vormistamise nõuded erinevatel koolidel erinevalt määratletud. Seega ei saa informatsiooni vormistamise kohta teistest allikatest, kui kooli juhendist või juhendajalt. Teiseks võib kõikide nõuete täpne jälgimine ja reaalne kehtestamine olla aeglane ja liigselt tähelepanu nõudev protsess, sest seda peab tegema käsitsi. Pikaaegne vormistamise periood võib negatiivselt mõjuda töö sisule ja kvaliteedile.
 \\\\Antud uurimistöö eesmärk on luua selline lahendus, kuhu õpilane peab sisestama ainult oma uurimistöö teksti ning vormistamine toimub automaatselt LaTeX tarkvara kaudu. Ühtlasi on eesmärgiks tutvustada LaTeX tarkvara ajalugu, sisu ja eeliseid uurimistöö vormistamisel. Innustada õpilasi kasutama LaTeX tarkvara oma uurimistöö vormistamisel, et nende töö kvaliteet ja sisu väärtus ei langeks vormistamise arvelt. 
-\\\\Kaks uurimisküsimust on püstitatud uurimistöö eesmärgi täitmiseks. Mis on LaTeX tarkvara? Millised on LaTeX tarkvara positiivsed ja negatiivsed küljed võrreldes enamlevinud tekstiredaktoritega? Kuidas vormistada uurimistööd Tallinna 21. Kooli nõuete järgi LaTeX tarkvaraga?
+\\\\Kolm uurimisküsimust on püstitatud uurimistöö eesmärgi täitmiseks. Mis on LaTeX tarkvara? Millised on LaTeX tarkvara positiivsed ja negatiivsed küljed võrreldes enamlevinud tekstiredaktoritega? Kuidas vormistada uurimistööd Tallinna 21. Kooli nõuete järgi LaTeX tarkvaraga?
 \\\\Uurimistöö esimeses pooles tutvustatakse LaTeX tarkvara olemust, ajalugu ning positiivseid kui ka negatiivseid külgi. Teine pool on pühendatud LaTeX tarkvara kasutamisele, kus seletatakse täpselt lahti kogu uurimistöö LaTeX tarkvaraga vormistamise protsess.
-\\\\Põhiliste allikatena kasutan LaTeX tarkvara juhend-raamatuid. Neist tähtsaim ja sisukaim on „The LaTeX Companion”.
+\\\\Põhiliste allikatena kasutan LaTeX tarkvara juhend-raamatuid. Neist tähtsaim ja sisukaim „The LaTeX Companion”.
 
 \chapter{TEOREETILINE TAUST}
 TeX tarkvara on Donald Knuth'i loodud tavateksti kui ka muud visuaalset infot sisaldavate dokumentide loomise vahend. Knuth iseloomustas TeX tarkvara, kui imeilustae raamatute loomise vahendit - eriti, kui raamat sisaldab palju matemaatikat (Mittlebach \& Goossens, 2004: 1). 1990-ndate algul lõpetas Knuth tarkvara stabiilsuse huvides TeX-i arendamise. 1980-ndatel alustas Leslie Lamport LaTeX tarkvara arendust. LaTeX on dokumentide ettevalmistussüsteem, mis kasutab märgenduskeelt ja TeX programmi. LaTeX-i vahendid dokumendi loomise automatiseerimiseks teevad selle kasutamise lihtsamaks kui TeX-i kasutamise. LaTeX on tarkvarana kujunenud üheks peamiseks TeX-i kasutamise vahendiks. LaTeX-i filosoofia seisneb autorite vabadusel olla keskendunud sellele, millest nad kirjutavad ja mitte olla häiritud sellest, milline on kirjatöö visuaalne presentatsioon. LaTeX tarkvara kasutatakse memorandumite, nii äri kui ka isiklike kirjade, ajalehtede, artiklite ja raamatute vormistamiseks (Mittlebach \& Goossens, 2004: 1). LaTeX on põhiline keeruliste tabelite ja matemaatiliste valemite kujutamismeetod (Kopka \& Daly, 2012: 7). LaTeX tarkvara kasutatakse paljudes erinevates eluvaldkondades: nii teaduses, ajakirjanduses kui ka kunstis (Kopka \& Daly, 2012: 3). LaTeX on läbinisti vabavara. Selle arendus on lubatud avalikkuse kätte, tingimusel, et uue lahenduse nimi on muudetud (Kopka \& Daly, 2012: 3). 
@@ -106,15 +106,17 @@ Addison-Wesley % esimene teos
 \end{verbatim}
 
 \section{Tabelid, joonised, valemid ja loetelud}
-Tabeli sisestamist alustatakse begin käsuga mille esimeseks argumendiks on tabular ja teiseks argumendiks tabeli kujundust määravad elemendid. Trafaretsemad teise argumendi elemendid on tähed r, l, c ning püstkriips. Argumendis esimene element määrab kõige vasakpoolsema veeru joonduse. Viimane element määrab kõige parempoolsema veeru joonduse. Keskmised elemendid määravad joonduse vastavalt sellel veerul, mitmendad elemendid nad argumendis on. Täht r tähistab parempoolset joondust, täht l vasakpoolset joondust ja täht c keskjoondust. Püstkriipse kasutatakse vertikaaljoonte loomiseks veergude vahele. Püstkriipsud asetatakse veergude joondust tähistavate elementide vahele. Kõik elemendid teises argumendis on eraldatud tühikuga. Tabelit lõpetatakse end käsuga, mille argumendiks on tabular. Tabeli sisu kirjutatakse begin ja end käskude vahele. Horisontaaljooni luuakse käsuga hline, millel pole argumente. Kahte veergu eristatakse \& sümboliga. Rida vahetatakse topelt tagurpidi kaldkriipsuga. Kõik elemendid on eraldatud tühikuga. Veergude ja ridade suurused määratakse automaatselt. Keerukamate tabelite loomist selgitatakse põhjalikumalt LaTeX dokumentatsioonis\footnote{http://en.wikibooks.org/wiki/LaTeX/Tables}. Näitena on toodud tabel ja sellele vastav LaTeX kood.\\\\
+Tabeli sisestamist alustatakse begin käsuga mille esimeseks argumendiks on tabular ja teiseks argumendiks tabeli kujundust määravad elemendid. Trafaretsemad teise argumendi elemendid on tähed r, l, c ning püstkriips. Argumendis esimene element määrab kõige vasakpoolsema veeru joonduse. Viimane element määrab kõige parempoolsema veeru joonduse. Keskmised elemendid määravad joonduse vastavalt sellel veerul, mitmendad elemendid nad argumendis on. Täht r tähistab parempoolset joondust, täht l vasakpoolset joondust ja täht c keskjoondust. Püstkriipse kasutatakse vertikaaljoonte loomiseks veergude vahele. Püstkriipsud asetatakse veergude joondust tähistavate elementide vahele. Kõik elemendid teises argumendis on eraldatud tühikuga. Tabelit lõpetatakse end käsuga, mille argumendiks on tabular. Tabeli sisu kirjutatakse begin ja end käskude vahele. Horisontaaljooni luuakse käsuga hline, millel pole argumente. Kahte veergu eristatakse \& sümboliga. Rida vahetatakse topelt tagurpidi kaldkriipsuga. Kõik elemendid on eraldatud tühikuga. Veergude ja ridade suurused määratakse automaatselt. Tabelitele lisatakse pealkirju captionof käsuga, mille esimeseks argumendiks on table ja teiseks argumendiks pealkiri. Numeratsioon toimub automaatselt. Keerukamate tabelite loomist selgitatakse põhjalikumalt LaTeX dokumentatsioonis\footnote{http://en.wikibooks.org/wiki/LaTeX/Tables}. Näitena on toodud tabel ja sellele vastav LaTeX kood.
+\captionof{table}{Näite tabel.}
 \begin{tabular}{| l | c | r |}
-   	\hline
-   	(1. rida 1. veerg) & (1.rida 2. veerg) & (1. rida 3. veerg) \\ \hline
-   	(2. rida 1. veerg) & (2. rida 2. veerg) & (2. rida 3. veerg) \\ \hline
+  \hline
+  (1. rida 1. veerg) & (1.rida 2. veerg) & (1. rida 3. veerg) \\ \hline
+  (2. rida 1. veerg) & (2. rida 2. veerg) & (2. rida 3. veerg) \\ \hline
 	(3. rida 1. veerg) & (3. rida 2. veerg) & (3. rida 3. veerg) \\
 	\hline
 \end{tabular}\\
 \begin{verbatim}
+\captionof{table}{Näite tabel.}
 \begin{tabular}{| l | c | r |}
 	\hline
 	(1. rida 1. veerg) & (1.rida 2. veerg) & (1. rida 3. veerg)
@@ -125,9 +127,12 @@ Tabeli sisestamist alustatakse begin käsuga mille esimeseks argumendiks on tabu
 	\hline
 \end{tabular}
 \end{verbatim}
-Jooniste lisamiseks kasutatakse käsku includegraphics, mille järel tuleb nurksulgudes määrata joonise suurus ning mille argumendiks on pildi nimetus ilma faililaiendita. Näites toodud joonise suurus on 2,5 sentimeetrit.
+Jooniste lisamiseks kasutatakse käsku includegraphics, mille järel tuleb nurksulgudes määrata joonise suurus ning mille argumendiks on pildi nimetus ilma faililaiendita. Pealkiri lisatakse käsuga captionof, mille esimeseks argumendiks on figure ja teiseks argumendiks pealkiri. Näites toodud joonise laius on 2,5 sentimeetrit.
+\captionof{figure}{Tibu.}
+\includegraphics[width=2.5cm]{Chick1}
 \begin{verbatim}
-\includegraphics[scale=width=2.5cm]{faili_nimetus}
+\captionof{figure}{Tibu.}
+\includegraphics[width=2.5cm]{Chick1}
 \end{verbatim}
 Valemite tekstisisesel kujutamisel kasutatakse \$ sümbolit ning tekstivälisel kujutamisel topelt \$ sümbolit. Sümbolit kasutatakse valemi alguse kui ka lõpu tähistamiseks. Erinevate tehtemärkide kohta saab informatsiooni dokumentatsioonist\footnote{http://en.wikibooks.org/wiki/LaTeX/Mathematics}.
 $$k_{n+1} = n^2 + k_n^2 - k_{n-1}$$
