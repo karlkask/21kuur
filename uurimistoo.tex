@@ -2,7 +2,7 @@
 
 \title{UURIMISTÖÖ VORMISTAMINE \latex TARKVARAGA TALLINNA 21. KOOLI NÕUETE JÄRGI}
 \author{Karl Kask}
-\klass{XI klass}
+\klass{XIA klass}
 \juhendaja{Siim Luha}
 
 \begin{document}
@@ -12,34 +12,37 @@
 \chapter*{SISSEJUHATUS}
 \addcontentsline{toc}{chapter}{SISSEJUHATUS}
 Peale mu algse teemavaliku kinnitamist võttis minuga ühendust kooli infotehnoloog ja väitis, et sellist uurimistööd pole koolil vaja ning soovitas mulle alternatiivi. Kuna väljapakutu minus erilist huvi ei tekitanud, otsustasin endale uue teema välja mõelda. Peale mitmeid vestlusi oma vennaga, kes on varem uurimistööid LaTeX tarkvaraga vormistanud, sain oma lõpliku uurimistöö teema sõnastatud.
-\\\\LaTeX tarkvara võimaldab õpilasele sellise olukorra, kus ta peab sisestama vaid oma uurimistöö teksti ja kogu vormistus toimub automaatselt vastavalt nõuetele. Uurimistöö vormistamine võib olla keeruline ja aeganõudev osa töö koostamisest mitmeil põhjuseil. Esiteks on vormistamise nõuded erinevatel koolidel erinevalt määratletud. Seega ei saa informatsiooni vormistamise kohta teistest allikatest, kui kooli juhendist või juhendajalt. Teiseks võib kõikide nõuete täpne jälgimine ja reaalne kehtestamine olla aeglane ja liigselt tähelepanu nõudev protsess, sest seda peab tegema käsitsi. Pikaaegne vormistamise periood võib negatiivselt mõjuda töö sisule ja kvaliteedile.
-\\\\Antud uurimistöö eesmärk on luua selline lahendus, kuhu õpilane peab sisestama ainult oma uurimistöö teksti ning vormistamine toimub automaatselt LaTeX tarkvara kaudu. Ühtlasi on eesmärgiks tutvustada LaTeX tarkvara ajalugu, sisu ja eeliseid uurimistöö vormistamisel. Innustada õpilasi kasutama LaTeX tarkvara oma uurimistöö vormistamisel, et nende töö kvaliteet ja sisu väärtus ei langeks vormistamise arvelt. 
-\\\\Kolm uurimisküsimust on püstitatud uurimistöö eesmärgi täitmiseks. Mis on LaTeX tarkvara? Millised on LaTeX tarkvara positiivsed ja negatiivsed küljed võrreldes enamlevinud tekstiredaktoritega? Kuidas vormistada uurimistööd Tallinna 21. Kooli nõuete järgi LaTeX tarkvaraga?
-\\\\Uurimistöö esimeses pooles tutvustatakse LaTeX tarkvara olemust, ajalugu ning positiivseid kui ka negatiivseid külgi. Teine pool on pühendatud LaTeX tarkvara kasutamisele, kus seletatakse täpselt lahti kogu uurimistöö LaTeX tarkvaraga vormistamise protsess.
+\\\\LaTeX tarkvara loob õpilasele olukorra, kus ta peab sisestama vaid oma uurimistöö teksti ja kogu vormistus toimub automaatselt vastavalt nõuetele. Uurimistöö vormistamine võib olla keeruline ja aeganõudev osa töö koostamisest mitmeil põhjuseil. Esiteks on vormistamise nõuded erinevatel koolidel erinevalt määratletud. Seega ei saa informatsiooni vormistamise kohta teistest allikatest, kui kooli juhendist või juhendajalt. Teiseks võib kõikide nõuete täpne jälgimine ja reaalne kehtestamine olla aeglane ja liigselt tähelepanu nõudev protsess, sest seda peab tegema käsitsi. Pikaaegne vormistamise periood võib negatiivselt mõjuda töö sisule ja kvaliteedile.
+\\\\Antud uurimistöö eesmärk on luua lahendus, kus õpilasel tuleb sisestada ainult oma uurimistöö tekst ning vormistamine toimub automaatselt LaTeX tarkvara kaudu. Ühtlasi on eesmärgiks tutvustada LaTeX tarkvara ajalugu, sisu ja eeliseid dokumentide vormistamisel. Innustada õpilasi kasutama LaTeX tarkvara oma uurimistöö vormistamisel, et nende töö kvaliteet ja sisu väärtus ei langeks vormistamise arvelt. 
+\\\\Uurimistöö eesmärgi täitmiseks on püstitatud kolm uurimisküsimust. Mis on LaTeX tarkvara? Millised on LaTeX tarkvara positiivsed ja negatiivsed küljed võrreldes enamlevinud tekstiredaktoritega? Kuidas vormistada uurimistööd Tallinna 21. Kooli nõuete järgi LaTeX tarkvaraga?
+\\\\Uurimistöö esimeses pooles tutvustatakse LaTeX tarkvara olemust, ajalugu ning positiivseid ja negatiivseid külgi. Teises pooles on juhend uurimistöö vormistamiseks Tallinna 21. Kooli nõuete järgi, kus seletatakse täpselt lahti kogu vormistamise protsess.
 \\\\Põhiliste allikatena kasutan LaTeX tarkvara juhend-raamatuid. Neist tähtsaim ja sisukaim „The LaTeX Companion”.
 
 \chapter{TEOREETILINE TAUST}
-TeX tarkvara on Donald Knuth'i loodud tavateksti kui ka muud visuaalset infot sisaldavate dokumentide loomise vahend. Knuth iseloomustas TeX tarkvara, kui imeilustae raamatute loomise vahendit - eriti, kui raamat sisaldab palju matemaatikat (Mittlebach \& Goossens, 2004: 1). 1990-ndate algul lõpetas Knuth tarkvara stabiilsuse huvides TeX-i arendamise. 1980-ndatel alustas Leslie Lamport LaTeX tarkvara arendust. LaTeX on dokumentide ettevalmistussüsteem, mis kasutab märgenduskeelt ja TeX programmi. LaTeX-i vahendid dokumendi loomise automatiseerimiseks teevad selle kasutamise lihtsamaks kui TeX-i kasutamise. LaTeX on tarkvarana kujunenud üheks peamiseks TeX-i kasutamise vahendiks. LaTeX-i filosoofia seisneb autorite vabadusel olla keskendunud sellele, millest nad kirjutavad ja mitte olla häiritud sellest, milline on kirjatöö visuaalne presentatsioon. LaTeX tarkvara kasutatakse memorandumite, nii äri kui ka isiklike kirjade, ajalehtede, artiklite ja raamatute vormistamiseks (Mittlebach \& Goossens, 2004: 1). LaTeX on põhiline keeruliste tabelite ja matemaatiliste valemite kujutamismeetod (Kopka \& Daly, 2012: 7). LaTeX tarkvara kasutatakse paljudes erinevates eluvaldkondades: nii teaduses, ajakirjanduses kui ka kunstis (Kopka \& Daly, 2012: 3). LaTeX on läbinisti vabavara. Selle arendus on lubatud avalikkuse kätte, tingimusel, et uue lahenduse nimi on muudetud (Kopka \& Daly, 2012: 3). 
+TeX tarkvara on Donald Knuth'i loodud tavateksti, aga ka muud visuaalset infot sisaldavate dokumentide loomise vahend. Knuth iseloomustas TeX tarkvara, kui imeilusate raamatute loomise vahendit - eriti, kui raamat sisaldab palju matemaatikat (Mittlebach \& Goossens, 2004: 1). 1990-ndate algul lõpetas Knuth tarkvara stabiilsuse huvides TeX-i arendamise. 1980-ndatel alustas Leslie Lamport LaTeX tarkvara arendust. LaTeX on dokumentide ettevalmistussüsteem, mis kasutab märgenduskeelt ja TeX programmi. LaTeX-i vahendid dokumendi loomise automatiseerimiseks teevad selle kasutamise lihtsamaks kui TeX-i kasutamise. LaTeX on tarkvarana kujunenud üheks peamiseks TeX-i kasutamise vahendiks. LaTeX-i filosoofia seisneb autorite vabadusel olla keskendunud sellele, millest nad kirjutavad ja mitte olla häiritud sellest, milline on kirjatöö visuaalne presentatsioon. LaTeX tarkvara kasutatakse memorandumite, nii äri kui ka isiklike kirjade, ajalehtede, artiklite ja raamatute vormistamiseks (Mittlebach \& Goossens, 2004: 1). LaTeX on põhiline keeruliste tabelite ja matemaatiliste valemite kujutamismeetod (Kopka \& Daly, 2012: 7). LaTeX tarkvara kasutatakse paljudes erinevates eluvaldkondades: nii teaduses, ajakirjanduses kui ka kunstis (Kopka \& Daly, 2012: 3). LaTeX on läbinisti vabavara. Selle arendus on lubatud avalikkuse kätte, tingimusel, et uue lahenduse nimi on muudetud (Kopka \& Daly, 2012: 3). 
 \\\\LaTeX-i süsteem on struktureeritud pakettidesse, mille hulk sõltub dokumendi iseloomust ja keerukusest. Pakette on võimalik ka ise juurde luua ja sellega LaTeX-i laiendada. LaTeX dokumenti valmistades kirjeldab autor struktuuri märksõnadega nagu peatükk, osa, tabel, joonis, valem jms. LaTeX hoolitseb teksti ja muude elementide paigutuse ja peatükkide, valemite, tabelite ja piltide automaatse nummerdamise ning kasutatud kirjanduse viidete ning sisukorra eest.
 
 \section{Miks LaTeX?}
-LaTeX suurim erinevus teiste tekstiredaktoritega seisneb loogilises disainis. Enamlevinud tekstiredaktorid põhinevad visuaalsel disainil, mistõttu neid nimetatakse „WYSIWYG”(what you see is what you get) programmideks. Visuaalse disaini atraktiivsus seisneb kasutaja võimaluses muuta oma dokumendi välimust töölaual otseselt. Neid programme on iseloomustatud ka lausega „what you see is all you've got”, millest tuleb välja ka nende programmide suurim nõrkus (Lamport, 1994: 7). Loogilise disaini võimsus seisneb disaini piiramatuses ja mitmete samasuguste elementide automaatses üheaegses muutmises. Üks suurimaid LaTeX tarkvara eeliseid on vormistuse eraldamine sisust klassi faili abil. See tähendab, et sama vormistuse peale võib kirjutada lõputuid erinevaid töid, ning sisu vastaks ikka nõuetele. Visuaalse disaini korral peab kõik tööd eraldi vormistama, sest seal peab kõik nõuded uuesti paika panema ja sisestama. LaTeX tarkvara negatiivne külg on vajadus klassi faili või siis piisavate teadmiste järele, et vormistamisega TeX programmis hakkama saada. Üldjuhul on ülikoolidel klassi fail olemas, ning seda ei pea ise looma. LaTeX tarkvaraga on võimalik ühtlustada dokumentide vormistamist institutsioonisde siseselt.
+LaTeX suurim erinevus teiste tekstiredaktoritega seisneb loogilises disainis. Enamlevinud tekstiredaktorid põhinevad visuaalsel disainil, mistõttu neid nimetatakse „WYSIWYG” (what you see is what you get) programmideks. Visuaalse disaini atraktiivsus seisneb kasutaja võimaluses muuta oma dokumendi välimust töölaual otseselt. Neid programme on iseloomustatud ka lausega „what you see is all you've got”, millest tuleb välja ka nende programmide suurim nõrkus (Lamport, 1994: 7). Loogilise disaini võimsus seisneb disaini piiramatuses ja mitmete samasuguste elementide automaatses üheaegses muutmises. Üks suurimaid LaTeX tarkvara eeliseid on vormistuse eraldamine sisust klassi faili abil. See tähendab, et sama vormistuse peale võib kirjutada lõputuid erinevaid töid, ning vorm vastaks ikka nõuetele. Visuaalse disaini korral peab kõik tööd eraldi vormistama, sest seal peab kõik nõuded uuesti paika panema ja sisestama. LaTeX tarkvara negatiivne külg on vajadus klassi faili või siis piisavate teadmiste järele, et vormistamisega TeX programmis hakkama saada. Üldjuhul on ülikoolidel klassi fail olemas, ning seda ei pea ise looma. LaTeX tarkvaraga on võimalik ühtlustada dokumentide vormistamist institutsioonide siseselt.
 
 \chapter{METOODIKA}
-Oma uurimistöö käigus uurin TeX ja LaTeX tarkvara ajalugu, kasutamisalasid ning positiivseid ja negatiivseid külgi. Oma uurimistöö praktilises osas arendan välja toimiva lahenduse uurimistöö vormistamiseks LaTeX tarkvaras ja kirjeldan üksikasjalikult protsessi. Tutvun põhjalikult kooli uurimistöö juhendiga ning LaTeX dokumentatsiooniga\footnote{http://en.wikibooks.org/wiki/LaTeX}. Proovin luua võimalikult võimeka klassi faili, et tex faili peaks võimalikult vähe sisestama koodi, mis on seotud töö vormistamisega. Klassi faili lisan tööle lisana.
+Oma uurimistöö käigus uurin TeX ja LaTeX tarkvara ajalugu, kasutamisalasid ning positiivseid ja negatiivseid külgi. Oma uurimistöö praktilises osas arendan välja toimiva lahenduse uurimistöö vormistamiseks LaTeX tarkvaras ning koostan juhendi uurimistöö vormistamiseks. Tutvun põhjalikult kooli uurimistöö juhendi ning LaTeX dokumentatsiooniga\footnote{http://en.wikibooks.org/wiki/LaTeX}. Klassi faili luues proovin tex faili vormistamisega seotud sisu võimalikult palju vähendada. Kogu klassi faili lisan tööle.
 
 \chapter{UURIMISTÖÖ VORMISTAMINE \latex TARKVARAGA}
-Uurimistöö vormistamiseks LaTeX tarkvaraga on vaja arvutile installeerida mõni TeX programm. Näiteks MikTeX. Samuti on vaja kooli nõuetele vastavat klassi faili. Tallinna 21. Kooli uurimistööd võib vormistada selle uurimistöö käigus loodud 21kuur.cls faili kasutades. Uurimistöö tex faili kirjutamist saab alustada, kui fail on salvestatud samasse kausta, kus asub klassi fail. Samasse kausta tuleb ka salvestab programm ka pdf faili. Tex faili sisu sisestatakse Texworks programmi aknasse ning ülevalt vasakult rippmenüüst valitakse pdfLaTeX + MakeIndex + BibTeX. Sisestatud koodi välundit on võimalik iga hetk kontrollida üleval vasakul oleva rohelise nupu vajutamisel. Nupu vajutamisel loob programm pdf faili, milleks on ka lõplik uurimistöö fail.
+Uurimistöö vormistamiseks LaTeX tarkvaraga on vaja arvutile installeerida mõni TeX programm, näiteks MikTeX. Samuti on vaja kooli nõuetele vastavat klassi faili. Tallinna 21. Kooli uurimistööd võib vormistada selle uurimistöö käigus loodud 21kuur faili kasutades. Uurimistöö tex faili kirjutamist saab alustada, kui fail on salvestatud samasse kausta, kus asub klassi fail. Samasse kausta salvestab programm ka pdf faili. Kui kasutatakse MikTeX programmi, siis tex faili sisu sisestatakse Texworks programmi aknasse ning ülevalt vasakult rippmenüüst valitakse pdfLaTeX + MakeIndex + BibTeX. Sisestatud koodi välundit on võimalik iga hetk kontrollida üleval vasakul oleva rohelise nupu vajutamisel. Nupu vajutamisel loob programm pdf faili ning kuvab selle sisu programmi siseselt. See pdf fail on ka lõplik uurimistöö fail.
+
+\captionof{figure}{MikTeX programmi TeXworksi aken.}
+\includegraphics[width=15cm]{tommis}
+
 \section{Üldine tex faili struktuur}
 TeX koodis on põhiliseks elemendiks tagurpidi kaldkriips. Sellega alustatakse käske, alustatakse uut rida ja päästetakse veaohtlikke elemente. Kõik käsud kirjutatakse väikeste tähtedega. Kommentaaride tegemiseks kasutatakse protsendi märki. Programm ei loe rea lõpuni teksti, mis on peale protsendi märki. Kommentaare võib kasutada tex faili sisu selgitamiseks. Kommentaarides ei pea veaohtlikke elemente päästma.
 
 LaTeX failide kood algab tavapäraselt dokumendi klassi nimetamisega. Antud juhul on klassiks 21kuur.
 \begin{verbatim}
 \documentclass{21kuur} % See on kommentaar. Seda teksti 
-programm ei loe.
+% programm ei loe.
 \end{verbatim}
-LaTeX failis tähistavad dokumendi sisu algust ja lõppu vastavalt begin ja end käsud. Argumendiks on document.
-\begin{verbatim}
+LaTeX failis tähistavad dokumendi sisu algust ja lõppu vastavalt begin ja end käsud, millel on argumendiks document.
 \begin{document}
 \end{document}
 \end{verbatim}
@@ -67,7 +70,7 @@ Tiitellehe loomiseks määratakse enne dokumendi sisu algust tiitellehel olev si
 \begin{verbatim}
 \title{UURIMISTÖÖ NIMI}
 \author{Koostaja Nimi}
-\klass{koostaja klass nt. "XI klass"}
+\klass{koostaja klass nt. "XIA klass"}
 \juhendaja{Juhendaja Nimi}
 \end{verbatim}
 Tiitelleht lisatakse dokumendi sisse maketitle käsuga, millel argument puudub. Tavaliselt on tiitleleht kohe peale dokumendi alustamise käsku.
@@ -80,7 +83,7 @@ Sisukorra loomiseks sisestatakse tableofcontents käsk ilma argumendita ning sis
 \end{verbatim}
 
 \section{Töö sisu sisestamine}
-Töö sisu sisestatakse kohe peale pealkirja käsku järgmisele reale lihtsa tekstina. Rööpjoondus ja sõnade poolitamisega toimub automaatselt. Reavahetust tekitatakse kaksik tagurpidi kaldkriipsuga. Uue paragrahvi loomiseks sisestatakse teksti vahele neli tagurpidi kaldkriipsu.
+Töö sisu sisestatakse kohe peale pealkirja käsku järgmisele reale lihtsa tekstina. Rööpjoondus ja sõnade poolitamisega toimub automaatselt. Reavahetust tekitatakse kaksik tagurpidi kaldkriipsuga. Uue lõigu loomiseks sisestatakse teksti vahele neli tagurpidi kaldkriipsu.
 \begin{verbatim}
 \chapter{PEALKIRI}
 Siin on esimene paragrahv.\\\\Siit algab järgmine paragrahv.\\
@@ -199,10 +202,10 @@ Kopka, H., Daly, P. W. (2012). Guide to LaTeX. 4. tr. Boston: Addison-Wesley
 \addcontentsline{toc}{chapter}{LISA 1 KLASSI FAIL}
 \begin{verbatim}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{21kuur}[2013/10/24 21.kooli uurimustöö 
+\ProvidesClass{21kuur}[2013/10/24 Tallinna 21. Kooli uurimustöö 
 vormistuse klass]
 
-\LoadClass[12pt]{report}  % kasuta standardset report klassi 
+\LoadClass[12pt]{report}  % Kasuta standardset report klassi 
 alusena.
 
 % Lehe asetus.
@@ -212,17 +215,11 @@ alusena.
 \geometry{textwidth=160mm, textheight=247mm, headheight=0cm, 
 headsep=0cm}
 
+% UTF-8
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
 \usepackage[estonian]{babel} % Eesti keel vaikimisi keeleks.
-
-\usepackage{tocbibind}
-
-% Peatükid algavad uuelt lehelt.
-\usepackage{etoolbox}
-%\patchcmd{\chapter}{\if@openright\cleardoublepage\else\
-clearpage\fi}{}{}{}
 
 % Leheküljenumbrid algavad pärast esimest pealkirja, kuid 
 pealkirjaga leht on tühi.

@@ -16,7 +16,7 @@
 \usepackage[estonian]{babel} % Eesti keel vaikimisi keeleks.
 
 % Sisukord sisukorda.
-\usepackage{tocbibind}
+% \usepackage{tocbibind}
 
 % Peatükid algavad uuelt lehelt.
 \usepackage{etoolbox}
@@ -98,16 +98,16 @@
         \begin{center}
         {\fontsize{14pt}{16.8pt}\selectfont\expandafter{\@asutus}} \\
         \end{center}
-        \vskip1in
+        \vskip0in
 
         \vfill
 
         \begin{center}
-                {\fontsize{20pt}{24pt}\selectfont\bfseries\expandafter{\@title}}
+                \doublespacing{\fontsize{20pt}{24pt}\selectfont\bfseries\expandafter{\@title}}
         \end{center}
         {\fontsize{14pt}{16.8pt}\selectfont\centerline{\@paber}}
 
-        \vskip.5in
+        \vskip-1.9in
         \vfill
         
         \begin{flushright}
