@@ -1,6 +1,6 @@
 \documentclass{21kuur}
 
-\title{UURIMISTÖÖ VORMISTAMINE \latex TARKVARAGA TALLINNA 21. KOOLI NÕUETE JÄRGI}
+\title{Uurimistöö vormistamine \latex tarkvaraga Tallinna 21. Kooli nõuete järgi}
 \author{Karl Kask}
 \klass{XIA klass}
 \juhendaja{Siim Luha}
@@ -43,6 +43,7 @@ LaTeX failide kood algab tavapäraselt dokumendi klassi nimetamisega. Antud juhu
 % programm ei loe.
 \end{verbatim}
 LaTeX failis tähistavad dokumendi sisu algust ja lõppu vastavalt begin ja end käsud, millel on argumendiks document.
+\begin{verbatim}
 \begin{document}
 \end{document}
 \end{verbatim}
@@ -60,15 +61,14 @@ Peatükkide ja alapeatükkide pealkirju luuakse vastavalt chapter ja section kä
 \end{verbatim}
 Lehekülje number eemaldatakse thispagestyle käsuga. Argumendiks on empty. Käsk asetatakse peale chapter käsku. Ilma leheküle numbrita on näiteks lisade ja kasutatud materjalide leht. Käsku ei pea kasutama tiitellehel ega sisukorra lehel, sest automaatne nummerdamine algab alates esimeset chapter käsust.
 \begin{verbatim}
-\chapter{ILMA LEHEKÜLJE NUMBRITA LEHEKÜLJEL ASETSEVA PEATÜKI 
-PEALKIRI}
+\chapter{Ilma lehekülje numbrita leheküljel asetseva peatüki pealkiri}
 \thispagestyle{empty}
 \end{verbatim}
 
 \section{Tiitllehe ja sisukorra loomine}
-Tiitellehe loomiseks määratakse enne dokumendi sisu algust tiitellehel olev sisu. Seda tehakse käskudega title, argumendiks uurimistöö pealkiri suurte tähtedega vastavalt juhendile, author, argumendiks uurimistöö koostaja nimi, klass, argumendiks koostaja klass, juhendaja, argumendiks juhendaja nimi. Asutuse nimi, asukoht, töö liik ja aasta lisatakse automaatselt.
+Tiitellehe loomiseks määratakse enne dokumendi sisu algust tiitellehel olev sisu. Seda tehakse käskudega title, argumendiks uurimistöö pealkiri, author, argumendiks uurimistöö koostaja nimi, klass, argumendiks koostaja klass, juhendaja, argumendiks juhendaja nimi. Asutuse nimi, asukoht, töö liik ja aasta lisatakse automaatselt.
 \begin{verbatim}
-\title{UURIMISTÖÖ NIMI}
+\title{Uurimistöö pealkiri}
 \author{Koostaja Nimi}
 \klass{koostaja klass nt. "XIA klass"}
 \juhendaja{Juhendaja Nimi}
@@ -184,11 +184,9 @@ Lisade pealkirjana kasutatakse chapter käsku mille lõppu on pandud nummerdamis
 \thispagestyle{empty}
 \end{verbatim}
 
-\chapter{TULEMUSED JA ANALÜÜS}
-Lõpliku klassi failiga täitsin üldmääral oma uurimistöö peamise eesmärgi, milleks oli sellise lahenduse loomine, et õpilane peaks sisestama vaid oma uurimistöö sisu ning kogu vormistus toimuks automaatselt. Peale mõne koodirea on selline lahendus saavutatud. Uurimistöö vormistaja peab sisukorda käsitsi lisama vaid nummerdamata peatükid. Selles uurimistöös toodud juhendit järgides on võimalik uurimistöö üldjuhul automaatne vormistus. Samuti on olemas LaTeX tarkvara tutvustav teoreetiline osa, kus on põhjendatud selle eelised ning negatiivsed küljed võrreldes enamlevinud tekstiredaktoritega ning ülevaade LaTeX ning TeX tarkvara ajaloost. Seega on uurimistöö eesmärgid täidetud ning uurimisküsimustele vastatud. 
 \chapter*{KOKKUVÕTE}
 \addcontentsline{toc}{chapter}{KOKKUVÕTE}
-Esimesele kahele uurimisküsimusele on vastatud esimeses peatükis ning kolmandale on vastatud kolmandas peatükis. Töö praktilises osas suutsin välja aretada piisavalt võimeka klassi faili, et täita uurimistöö eesmärk. Klassi faili loomine võttis oodetust kauem aega ning oli keerulisem, kui oletasin. Kuid üldjuhul on tulemus piisav. Klassi faili on tulevikus võimalik täiustada ning uuendada. Samuti toon välja ettepaneku täiustada kooli vormistamise juhendit, et sealt ei puuduks informatsioon tabelite, jooniste jm korrektse vormistamise kohta.
+Lõpliku klassi failiga täitsin üldmääral oma uurimistöö peamise eesmärgi, milleks oli sellise lahenduse loomine, et õpilane peaks sisestama vaid oma uurimistöö sisu ning kogu vormistus toimuks automaatselt. Peale mõne koodirea on selline lahendus saavutatud. Uurimistöö kirjutaja peab sisukorda käsitsi lisama vaid nummerdamata peatükid. Selles uurimistöös toodud juhendit järgides on võimalik uurimistöö üldjuhul automaatne vormistus. Samuti on olemas LaTeX tarkvara tutvustav teoreetiline osa, kus on põhjendatud selle eelised ning negatiivsed küljed võrreldes enamlevinud tekstiredaktoritega ning ülevaade LaTeX ning TeX tarkvara ajaloost. Seega on uurimistöö eesmärgid täidetud ning uurimisküsimustele vastatud. Klassi faili loomine võttis oodetust kauem aega ning oli keerulisem, kui oletasin. Kuid üldjuhul on tulemus piisav. Klassi faili on tulevikus võimalik täiustada ning uuendada. Samuti toon välja ettepaneku täiustada kooli vormistamise juhendit, et sealt ei puuduks informatsioon tabelite, jooniste jm korrektse vormistamise kohta. Esimesele kahele uurimisküsimusele on vastatud esimeses peatükis ning kolmandale on vastatud kolmandas peatükis.
 
 \chapter*{KASUTATUD MATERJALID}
 \addcontentsline{toc}{chapter}{KASUTATUD MATERJALID}

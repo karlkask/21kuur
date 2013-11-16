@@ -103,7 +103,7 @@
         \vfill
 
         \begin{center}
-                \doublespacing{\fontsize{20pt}{24pt}\selectfont\bfseries\expandafter{\@title}}
+                \doublespacing{\fontsize{20pt}{24pt}\selectfont\bfseries\uppercase\expandafter{\@title}}
         \end{center}
         {\fontsize{14pt}{16.8pt}\selectfont\centerline{\@paber}}
 
@@ -127,7 +127,7 @@
 	{\thechapter. } % Etiketi formaat
 	{0pt} % Märgise ja pealkirja vahe.
 	{\uppercase} 
-	[] 
+	[]
 
 \titlespacing{\chapter}
 	{0pt} % Vasakult
