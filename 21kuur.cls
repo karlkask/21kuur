@@ -111,8 +111,8 @@
         \vfill
         
         \begin{flushright}
-                {\fontsize{14pt}{16.8pt}\selectfont\expandafter{\@author} \expandafter{\@klass}} \\
-                Juhendaja: \expandafter{\@juhendaja}
+                {\fontsize{14pt}{16.8pt}\selectfont Koostaja: \expandafter{\@author} \expandafter{\@klass}} \\
+                {\fontsize{14pt}{16.8pt}\selectfont Juhendaja: \expandafter{\@juhendaja}}
         \end{flushright}
         \vskip.5in
 
@@ -120,6 +120,32 @@
         {\fontsize{14pt}{16.8pt}\selectfont\centerline{\@koht{} \the\year}}%
         \clearpage
         }
+
+% Kood annotatsiooni genereerimiseks.
+\newcommand{\makeannotation}{
+        \thispagestyle{empty}
+        \vspace*{-1cm}
+        {\fontsize{16pt}{19.2pt}\selectfont ANNOTATSIOON}\\\\
+        {\fontsize{12pt}{14.4pt}\selectfont Tallinna 21. Kool} \\
+        \begin{tabular}{| l | l |}
+          \hline                       
+          \multicolumn{2}{|l|}{Töö pealkiri} \\
+          \hline
+          Töö kaitsmise kuu ja aasta & Lehekülgede arv töös: \\
+          \hline
+          \multicolumn{2}{|l|}{Referaat} \\
+          \hline
+          \multicolumn{2}{|l|}{Võtmesõnad:} \\
+          \hline
+          Töö autor: & allkiri: \\
+          \hline
+          Kaitsmisele lubatud: &  \\
+          Juhendaja: & allkiri: \\
+          \hline  
+        \end{tabular}
+        \clearpage
+        }
+
 
 % Peatüki pealkirja kujundus.
 \titleformat{\chapter}[hang]
@@ -207,3 +233,5 @@
 \usepackage{perpage}
 \MakePerPage{footnote}
 
+% Verbatim font väiksemaks.
+\def\verbatim{\footnotesize\@verbatim \onehalfspacing\@vobeyspaces \@xverbatim}
