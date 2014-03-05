@@ -71,20 +71,28 @@
 % Times New Roman kõikjal.
 \usepackage{times}
 
-% Eemaldab paragrahvidel taande ja teeb nende vahele tühja rea.
+% Eemaldab alapealkirjadel taande ja teeb nende vahele tühja rea.
 \usepackage[parfill]{parskip}
 
 % titlesec pakett.
 \usepackage{titlesec}
 
-% Tiitellehe kujundus
-%% Tiitellehe genereerimine
 % Eestikeelsed muutujad.
 \def\klass#1{\gdef\@klass{#1}}
 \def\juhendaja#1{\gdef\@juhendaja{#1}}
 \def\asutus#1{\gdef\@asutus{#1}}
 \def\paber#1{\gdef\@paber{#1}}
 \def\koht#1{\gdef\@koht{#1}}
+\def\referaat#1{\gdef\@referaat{#1}}
+\def\kuujaaasta#1{\gdef\@kuujaaasta{#1}}
+\def\uldlkarv#1{\gdef\@uldlkarv{#1}}
+\def\tekstlkarv#1{\gdef\@tekstlkarv{#1}}
+\def\tabtkarv#1{\gdef\@tablkarv{#1}}
+\def\lisatkarv#1{\gdef\@lisalkarv{#1}}
+\def\joontkarv#1{\gdef\@joonlkarv{#1}}
+\def\kasktkarv#1{\gdef\@kasklkarv{#1}}
+\def\votme#1{\gdef\@votme{#1}}
+\def\refjar#1{\gdef\@refjar{#1}}
 
 % Vaikeväärtused
 \paber{Uurimist\"o\"o}
@@ -121,28 +129,64 @@
         \clearpage
         }
 
+% graphicx pakett.
+\usepackage{graphicx}
+
+% tabularx pakett.
+\usepackage{tabularx}
+
 % Kood annotatsiooni genereerimiseks.
+\usepackage{multirow}
 \newcommand{\makeannotation}{
+        \chapter*{ANNOTATSIOON}
+        \cftaddtitleline{toc}{chapter}{ANNOTATSIOON}{2}
         \thispagestyle{empty}
-        \vspace*{-1cm}
-        {\fontsize{16pt}{19.2pt}\selectfont ANNOTATSIOON}\\\\
-        {\fontsize{12pt}{14.4pt}\selectfont Tallinna 21. Kool} \\
-        \begin{tabular}{| l | l |}
-          \hline                       
-          \multicolumn{2}{|l|}{Töö pealkiri} \\
-          \hline
-          Töö kaitsmise kuu ja aasta & Lehekülgede arv töös: \\
-          \hline
-          \multicolumn{2}{|l|}{Referaat} \\
-          \hline
-          \multicolumn{2}{|l|}{Võtmesõnad:} \\
-          \hline
-          Töö autor: & allkiri: \\
-          \hline
-          Kaitsmisele lubatud: &  \\
-          Juhendaja: & allkiri: \\
-          \hline  
-        \end{tabular}
+%        {\fontsize{16pt}{19.2pt}\selectfont ANNOTATSIOON}\\\\
+        {\fontsize{12pt}{14.4pt}\selectfont {\@asutus}} \\
+          \begin{tabularx}{\textwidth}{ | l | X | }
+            \hline                       
+            \multicolumn{2}{|l|}{Töö pealkiri} \\
+	 \multicolumn{2}{|l|}{
+            \begin{tabular}{p{15cm}}
+              {\@title}\\
+            \end{tabular} 
+            }\\
+         %   \multicolumn{2}{|l|}{{\@title}} \\
+            \hline
+            \begin{tabular}{l}
+              Töö kaitsmise kuu ja aasta \\
+              {\@kuujaaasta} \\
+               \\
+            \end{tabular}
+            & 
+            \begin{tabular}{r r}
+              lehekülgede arv töös: {\@uldlkarv} lk, & millest teksti: {\@tekstlkarv} lk \\
+              tabeleid: {\@tablkarv} tk & lisasid: {\@lisalkarv} tk \\
+              jooniseid: {\@joonlkarv} tk & kasutatud allikaid: {\@kasklkarv} tk \\
+            \end{tabular} \\
+            \hline
+            \multicolumn{2}{|l|}{Referaat} \\
+            \multicolumn{2}{|l|}{
+            \begin{tabular}{p{15cm}}
+              {\@referaat}\\[\@refjar cm]
+            \end{tabular} 
+            }\\
+            \hline
+	 \multicolumn{2}{|l|}{
+            \begin{tabular}{p{15cm}}
+              Võtmesõnad: {\@votme}\\
+            \end{tabular} 
+            }\\
+            %\multicolumn{2}{|l|}{Võtmesõnad: {\@votme}} \\
+            \multicolumn{2}{|l|}{} \\
+            \hline
+            \multicolumn{1}{|l}{Töö autor:} & {allkiri:} \\
+            \multicolumn{1}{|l}{{\@author}} & \\
+            \hline
+            \multicolumn{1}{|l}{Kaitsmisele lubatud:} &  \\
+            \multicolumn{1}{|l}{Juhendaja: \expandafter{\@juhendaja}} & allkiri: \\
+            \hline  
+          \end{tabularx}
         \clearpage
         }
 
@@ -158,7 +202,7 @@
 \titlespacing{\chapter}
 	{0pt} % Vasakult
 	{*0} % Vertikaal enne
-	{*2} % Vertikaal peale
+	{20pt} % Vertikaal peale
 
 % Peatüki eelne vahe.
 \def\ttl@mkchap@i#1#2#3#4#5#6#7{%
@@ -198,11 +242,25 @@
 
 % Tabelite ja jooniste numbrid ilma koolonita.
 \usepackage{caption}
+
+\setlength{\abovecaptionskip}{5pt}
+
 % Kõik pealkirjad vasakjoondusega.
 \captionsetup{justification=justified,singlelinecheck=false}
 
 % Joonis vahetult seda kirjeldava teksti juures ehk sama alapeatüki sees.
 \usepackage[section]{placeins}
+
+% Tabelitele allikad
+\newcommand*{\tabsource}[1]{% 
+    \hspace{\linewidth}
+    \newline Allikas: #1%
+}
+
+% Joonistele allikad
+\newcommand*{\joonsource}[1]{% 
+    Allikas: #1%
+}
 
 % Pealkirjad pealkirjade stiili.
 \newcommand{\trkcaptionsetup}{\captionsetup{labelformat=simple, labelsep=period, labelfont=bf, font=bf}}
@@ -218,9 +276,6 @@
 \counterwithout{table}{chapter}
 \counterwithout{equation}{chapter}
 \counterwithout{footnote}{chapter}
-
-% graphicx pakett jooniste sisestamiseks.
-\usepackage{graphicx}
 
 % xspace pakett, ning käsk nime LaTeX stiliseeritud kujutamiseks
 \usepackage{xspace}
